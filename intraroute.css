@@ -24,28 +24,63 @@ body {
 
 .top-logo-intraroute {
     margin-top: 15px;
-    height: 80px;
+}
+
+@media (min-width: 930px) {
+    .gray-box-before {
+        width: 800px;
+        border-radius: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .top-logo-intraroute {
+        height: 80px;
+    }
+
+    .gray-box-before h1 {
+        font-size: 2.5rem;
+    }
+
+    .gray-box-before p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 930px) {
+    .gray-box-before {
+        width: 100%;
+    }
+
+    .top-logo-intraroute {
+        width: 400px;
+    }
+
+    .gray-box-before h1 {
+        font-size: 2.2rem;
+    }
+
+    .gray-box-before p {
+        font-size: 1.15rem;
+    }
 }
 
 .gray-box-before {
     background-color: #4d4d4d;
-    width: 800px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    padding: 50px;
-    border-radius: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .gray-box-before h1 {
     color: white;
-    font-size: 2.5rem;
     text-align: center;
 }
 
 .gray-box-before p {
     color: white;
-    font-size: 1.25rem;
     text-align: center;
 }
 
@@ -101,6 +136,12 @@ select {
     font-size: 1.1rem;
 }
 
+@media (max-width: 930px) {
+    select {
+        width: 200px;
+    }
+}
+
 .button-box {
     display: flex;
     justify-content: center;
@@ -146,8 +187,34 @@ select {
     color: white;
 }
 
-.box-logo {
+.box-logo-desktop {
     width: 150px;
+}
+
+@media (max-width: 930px) {
+    .box-logo-desktop {
+        display: none;
+    }
+}
+
+.box-logo-box {
+    display: block;
+}
+
+.box-logo-mobile {
+    width: 150px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 930px) {
+    .box-logo-box {
+        display: none;
+    }
+
+    .box-logo-mobile {
+        display: none;
+    }
 }
 
 .pseudo-footer {
