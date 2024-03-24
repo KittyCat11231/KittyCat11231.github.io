@@ -352,7 +352,8 @@ footer p {
 
 @media (max-width: 880px) {
     .bottom-logo {
-        width: 350px;
+        width: 50%;
+        min-width: 300px;
         display: block;
         margin-left: auto;
         margin-right: auto;
