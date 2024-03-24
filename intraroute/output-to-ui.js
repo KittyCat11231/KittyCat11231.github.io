@@ -158,8 +158,8 @@ const bahn1north = {
     id: 'bahn1north',
     mode: 'bahn',
     type: 'mainline',
-    bullet: 'assets/intrabahn/bullets/1.png',
-    bulletWhite: 'assets/intrabahn/bullets/1-white.png',
+    bullet: 'intraroute/assets/intrabahn/bullets/1.png',
+    bulletWhite: 'intraroute/assets/intrabahn/bullets/1-white.png',
     bulletAltText: 'IntraBahn 1',
     routeName: 'Intrepid',
     terminus: bahnWHQ,
@@ -174,8 +174,8 @@ const bahn1south = {
     id: 'bahn1south',
     mode: 'bahn',
     type: 'mainline',
-    bullet: 'assets/intrabahn/bullets/1.png',
-    bulletWhite: 'assets/intrabahn/bullets/1-white.png',
+    bullet: 'intraroute/assets/intrabahn/bullets/1.png',
+    bulletWhite: 'intraroute/assets/intrabahn/bullets/1-white.png',
     bulletAltText: 'IntraBahn 1',
     routeName: 'Intrepid',
     terminus: bahnZQA,
@@ -190,8 +190,8 @@ const bahn1Xnorth = {
     id: 'bahn1Xnorth',
     mode: 'bahn',
     type: 'express',
-    bullet: 'assets/intrabahn/bullets/1X.png',
-    bulletWhite: 'assets/intrabahn/bullets/1X-white.png',
+    bullet: 'intraroute/assets/intrabahn/bullets/1X.png',
+    bulletWhite: 'intraroute/assets/intrabahn/bullets/1X-white.png',
     bulletAltText: 'IntraBahn 1X',
     routeName: 'Intrepid Express',
     terminus: bahnWHQ,
@@ -206,8 +206,8 @@ const bahn1Xsouth = {
     id: 'bahn1Xsouth',
     mode: 'bahn',
     type: 'express',
-    bullet: 'assets/intrabahn/bullets/1X.png',
-    bulletWhite: 'assets/intrabahn/bullets/1X-white.png',
+    bullet: 'intraroute/assets/intrabahn/bullets/1X.png',
+    bulletWhite: 'intraroute/assets/intrabahn/bullets/1X-white.png',
     bulletAltText: 'IntraBahn 1X',
     routeName: 'Intrepid Express',
     terminus: bahnZQA,
@@ -222,8 +222,8 @@ const bahn1Inorth = {
     id: 'bahn1Inorth',
     mode: 'bahn',
     type: 'branch',
-    bullet: 'assets/intrabahn/bullets/1i.png',
-    bulletWhite: 'assets/intrabahn/bullets/1i-white.png',
+    bullet: 'intraroute/assets/intrabahn/bullets/1i.png',
+    bulletWhite: 'intraroute/assets/intrabahn/bullets/1i-white.png',
     bulletAltText: 'IntraBahn 1i',
     routeName: 'Schillerton Branch North',
     terminus: bahnWHQ,
@@ -238,8 +238,8 @@ const bahn1Isouth = {
     id: 'bahn1Isouth',
     mode: 'bahn',
     type: 'branch',
-    bullet: 'assets/intrabahn/bullets/1i.png',
-    bulletWhite: 'assets/intrabahn/bullets/1i-white.png',
+    bullet: 'intraroute/assets/intrabahn/bullets/1i.png',
+    bulletWhite: 'intraroute/assets/intrabahn/bullets/1i-white.png',
     bulletAltText: 'IntraBahn 1i',
     routeName: 'Schillerton Branch North',
     terminus: bahnSHD,
@@ -254,8 +254,8 @@ const bahn1Jnorth = {
     id: 'bahn1Jnorth',
     mode: 'bahn',
     type: 'branch',
-    bullet: 'assets/intrabahn/bullets/1j.png',
-    bulletWhite: 'assets/intrabahn/bullets/1j-white.png',
+    bullet: 'intraroute/assets/intrabahn/bullets/1j.png',
+    bulletWhite: 'intraroute/assets/intrabahn/bullets/1j-white.png',
     bulletAltText: 'IntraBahn 1j',
     routeName: 'Schillerton Branch South',
     terminus: bahnSHD,
@@ -270,8 +270,8 @@ const bahn1Jsouth = {
     id: 'bahn1Jsouth',
     mode: 'bahn',
     type: 'branch',
-    bullet: 'assets/intrabahn/bullets/1j.png',
-    bulletWhite: 'assets/intrabahn/bullets/1j-white.png',
+    bullet: 'intraroute/assets/intrabahn/bullets/1j.png',
+    bulletWhite: 'intraroute/assets/intrabahn/bullets/1j-white.png',
     bulletAltText: 'IntraBahn 1j',
     routeName: 'Schillerton Branch South',
     terminus: bahnZQA,
@@ -286,8 +286,8 @@ const bahn1JXnorth = {
     id: 'bahn1JXnorth',
     mode: 'bahn',
     type: 'branch',
-    bullet: 'assets/intrabahn/bullets/1jX.png',
-    bulletWhite: 'assets/intrabahn/bullets/1jX-white.png',
+    bullet: 'intraroute/assets/intrabahn/bullets/1jX.png',
+    bulletWhite: 'intraroute/assets/intrabahn/bullets/1jX-white.png',
     bulletAltText: 'IntraBahn 1jX',
     routeName: 'Schillerton Branch South Express',
     terminus: bahnSHD,
@@ -302,8 +302,8 @@ const bahn1JXsouth = {
     id: 'bahn1JXsouth',
     mode: 'bahn',
     type: 'branch',
-    bullet: 'assets/intrabahn/bullets/1jX.png',
-    bulletWhite: 'assets/intrabahn/bullets/1jX-white.png',
+    bullet: 'intraroute/assets/intrabahn/bullets/1jX.png',
+    bulletWhite: 'intraroute/assets/intrabahn/bullets/1jX-white.png',
     bulletAltText: 'IntraBahn 1jX',
     routeName: 'Schillerton Branch South Express',
     terminus: bahnZQA,
@@ -318,8 +318,8 @@ const bahnZQcw = {
     id: 'bahnZQcw',
     mode: 'bahn',
     type: 'shuttle',
-    bullet: 'assets/intrabahn/bullets/ZQ.png',
-    bulletWhite: 'assets/intrabahn/bullets/ZQ-white.png',
+    bullet: 'intraroute/assets/intrabahn/bullets/ZQ.png',
+    bulletWhite: 'intraroute/assets/intrabahn/bullets/ZQ-white.png',
     bulletAltText: 'IntraBahn ZQ',
     routeName: 'Zaquar Shuttle',
     terminus: null,
@@ -334,8 +334,8 @@ const bahnZQccw = {
     id: 'bahnZQccw',
     mode: 'bahn',
     type: 'shuttle',
-    bullet: 'assets/intrabahn/bullets/ZQ.png',
-    bulletWhite: 'assets/intrabahn/bullets/ZQ-white.png',
+    bullet: 'intraroute/assets/intrabahn/bullets/ZQ.png',
+    bulletWhite: 'intraroute/assets/intrabahn/bullets/ZQ-white.png',
     bulletAltText: 'IntraBahn ZQ',
     routeName: 'Zaquar Shuttle',
     terminus: null,
@@ -367,7 +367,7 @@ function stopBox(stop, typeStartTransferEnd, documentId) {
     let modeAlt;
 
     if (mode === 'bahn') {
-        modeImage = 'logos/intrabahn-white.svg';
+        modeImage = 'intraroute/logos/intrabahn-white.svg';
         modeAlt = 'IntraBahn';
     }
 
@@ -563,7 +563,7 @@ function bahnRouteBox(routes, stop1, stop2, numOfStops, documentId) {
     document.getElementById(documentId).innerHTML = `
     <div class="segment segment-bahn segment-bahn-${route1.type}">
         <div class="mode-logo-box">
-            <img class="mode-logo bahn-logo" src="logos/intrabahn-white.svg" alt="IntraBahn">
+            <img class="mode-logo bahn-logo" src="intraroute/logos/intrabahn-white.svg" alt="IntraBahn">
         </div>
         <div class="route-info-box">
             <img class="bullet bahn-bullet" src="${route1.bulletWhite}" alt="${route1.bulletAltText}">
@@ -579,7 +579,7 @@ function bahnRouteBox(routes, stop1, stop2, numOfStops, documentId) {
                 <img class="bullet-small bahn-bullet-small" src="${route2bulletWhite ?? ""}" alt="${route2bulletAltText ?? ""}">
             </div>
             <div class="mode-logo-small-box">
-                <img class="mode-logo-small bahn-logo-small" src="logos/intrabahn-white.svg" alt="IntraBahn">
+                <img class="mode-logo-small bahn-logo-small" src="intraroute/logos/intrabahn-white.svg" alt="IntraBahn">
             </div>
         </div>
         <div class="other-routes other-routes-bahn-multi ${displayClass3routes ?? ""}">
@@ -596,7 +596,7 @@ function bahnRouteBox(routes, stop1, stop2, numOfStops, documentId) {
                 <img class="bullet-small bahn-bullet-small ${displayClass10routes ?? ""}" src="${route10bullet ?? ""}" alt="${route10bulletAltText ?? ""}">
             </div>
             <div class="mode-logo-small-box">
-                <img class="mode-logo-small bahn-logo-small" src="logos/intrabahn.svg" alt="IntraBahn">
+                <img class="mode-logo-small bahn-logo-small" src="intraroute/logos/intrabahn.svg" alt="IntraBahn">
             </div>
         </div>
         <p class="stop-city-code"><span class="stop-city bold">${stop1.city}</span> <span class="stop-code">(${stop1.code})</span></p>
@@ -604,7 +604,7 @@ function bahnRouteBox(routes, stop1, stop2, numOfStops, documentId) {
         <p class="stop-metadata bold">${stop1metadata1}</p>
         <p class="stop-metadata bold">${stop1metadata2 ?? ""}</p>
         <div class="arrow-and-stops">
-            <img class="arrow" src="assets/down-arrow.svg" alt="arrow pointing down">
+            <img class="arrow" src="intraroute/assets/down-arrow.svg" alt="arrow pointing down">
             <p class="num-of-stops">${numOfStopsExt} until...</p>
         </div>
         <p class="stop-city-code"><span class="stop-city bold">${stop2.city}</span> <span class="stop-code">(${stop2.code})</span></p>
@@ -621,10 +621,10 @@ function bahnZQrouteBoxZQLtoZQT(documentId) {
     document.getElementById(documentId).innerHTML = `
     <div class="segment segment-bahn segment-bahn-shuttle">
         <div class="mode-logo-box">
-            <img class="mode-logo bahn-logo" src="logos/intrabahn-white.svg" alt="IntraBahn">
+            <img class="mode-logo bahn-logo" src="intraroute/logos/intrabahn-white.svg" alt="IntraBahn">
         </div>
         <div class="route-info-box">
-            <img class="bullet bahn-bullet" src="assets/intrabahn/bullets/ZQ-white.png" alt="IntraBahn ZQ">
+            <img class="bullet bahn-bullet" src="intraroute/assets/intrabahn/bullets/ZQ-white.png" alt="IntraBahn ZQ">
             <div class="route-info-text-box">
                 <p class="route-info-text route-name bold">Zaquar Shuttle</p>
                 <p class="route-info-text route-towards">towards</p>
@@ -636,7 +636,7 @@ function bahnZQrouteBoxZQLtoZQT(documentId) {
         <p class="stop-metadata bold">Ticket Machine A1</p>
         <p class="stop-metadata bold">Track 4</p>
         <div class="arrow-and-stops">
-            <img class="arrow" src="assets/down-arrow.svg" alt="arrow pointing down">
+            <img class="arrow" src="intraroute/assets/down-arrow.svg" alt="arrow pointing down">
             <p class="num-of-stops">1 stop until...</p>
         </div>
         <p class="stop-city-code"><span class="stop-city bold">Zaquar</span> <span class="stop-code">(ZQT)</span></p>
@@ -652,10 +652,10 @@ function bahnZQrouteBoxZQTtoZQL(documentId) {
     document.getElementById(documentId).innerHTML = `
     <div class="segment segment-bahn segment-bahn-shuttle">
         <div class="mode-logo-box">
-            <img class="mode-logo bahn-logo" src="logos/intrabahn-white.svg" alt="IntraBahn">
+            <img class="mode-logo bahn-logo" src="intraroute/logos/intrabahn-white.svg" alt="IntraBahn">
         </div>
         <div class="route-info-box">
-            <img class="bullet bahn-bullet" src="assets/intrabahn/bullets/ZQ-white.png" alt="IntraBahn ZQ">
+            <img class="bullet bahn-bullet" src="intraroute/assets/intrabahn/bullets/ZQ-white.png" alt="IntraBahn ZQ">
             <div class="route-info-text-box">
                 <p class="route-info-text route-name bold">Zaquar Shuttle</p>
                 <p class="route-info-text route-towards">towards</p>
@@ -666,7 +666,7 @@ function bahnZQrouteBoxZQTtoZQL(documentId) {
         <p class="stop-stop-name">Tanzanite Station</p>
         <p class="stop-metadata bold">Track 44</p>
         <div class="arrow-and-stops">
-            <img class="arrow" src="assets/down-arrow.svg" alt="arrow pointing down">
+            <img class="arrow" src="intraroute/assets/down-arrow.svg" alt="arrow pointing down">
             <p class="num-of-stops">1 stop until...</p>
         </div>
         <p class="stop-city-code"><span class="stop-city bold">Zaquar</span> <span class="stop-code">(ZQL)</span></p>
@@ -682,10 +682,10 @@ function bahnZQrouteBoxZQTtoZQA(documentId) {
     document.getElementById(documentId).innerHTML = `
     <div class="segment segment-bahn segment-bahn-shuttle">
         <div class="mode-logo-box">
-            <img class="mode-logo bahn-logo" src="logos/intrabahn-white.svg" alt="IntraBahn">
+            <img class="mode-logo bahn-logo" src="intraroute/logos/intrabahn-white.svg" alt="IntraBahn">
         </div>
         <div class="route-info-box">
-            <img class="bullet bahn-bullet" src="assets/intrabahn/bullets/ZQ-white.png" alt="IntraBahn ZQ">
+            <img class="bullet bahn-bullet" src="intraroute/assets/intrabahn/bullets/ZQ-white.png" alt="IntraBahn ZQ">
             <div class="route-info-text-box">
                 <p class="route-info-text route-name bold">Zaquar Shuttle</p>
                 <p class="route-info-text route-towards">towards</p>
@@ -696,7 +696,7 @@ function bahnZQrouteBoxZQTtoZQA(documentId) {
         <p class="stop-stop-name">Tanzanite Station</p>
         <p class="stop-metadata bold">Track 43</p>
         <div class="arrow-and-stops">
-            <img class="arrow" src="assets/down-arrow.svg" alt="arrow pointing down">
+            <img class="arrow" src="intraroute/assets/down-arrow.svg" alt="arrow pointing down">
             <p class="num-of-stops">1 stop until...</p>
         </div>
         <p class="stop-city-code"><span class="stop-city bold">Zaquar</span> <span class="stop-code">(ZQA)</span></p>
@@ -712,10 +712,10 @@ function bahnZQrouteBoxZQAtoZQT(documentId) {
     document.getElementById(documentId).innerHTML = `
     <div class="segment segment-bahn segment-bahn-shuttle">
         <div class="mode-logo-box">
-            <img class="mode-logo bahn-logo" src="logos/intrabahn-white.svg" alt="IntraBahn">
+            <img class="mode-logo bahn-logo" src="intraroute/logos/intrabahn-white.svg" alt="IntraBahn">
         </div>
         <div class="route-info-box">
-            <img class="bullet bahn-bullet" src="assets/intrabahn/bullets/ZQ-white.png" alt="IntraBahn ZQ">
+            <img class="bullet bahn-bullet" src="intraroute/assets/intrabahn/bullets/ZQ-white.png" alt="IntraBahn ZQ">
             <div class="route-info-text-box">
                 <p class="route-info-text route-name bold">Zaquar Shuttle</p>
                 <p class="route-info-text route-towards">towards</p>
@@ -726,7 +726,7 @@ function bahnZQrouteBoxZQAtoZQT(documentId) {
         <p class="stop-stop-name">Air & Sea Ports</p>
         <p class="stop-metadata bold">Track 1</p>
         <div class="arrow-and-stops">
-            <img class="arrow" src="assets/down-arrow.svg" alt="arrow pointing down">
+            <img class="arrow" src="intraroute/assets/down-arrow.svg" alt="arrow pointing down">
             <p class="num-of-stops">1 stop until...</p>
         </div>
         <p class="stop-city-code"><span class="stop-city bold">Zaquar</span> <span class="stop-code">(ZQL)</span></p>
