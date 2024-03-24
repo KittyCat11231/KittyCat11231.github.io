@@ -84,6 +84,7 @@ body {
 
     .dropdown-button {
         background-color: #ff7f27;
+        padding: 9px 16px;
         color: white;
         border: none;
         font-size: 1.3rem;
@@ -101,7 +102,7 @@ body {
         width: 100%;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
-        margin-top: 33px;
+        margin-top: 49px;
     }
 
     .dropdown-content a {
@@ -116,12 +117,12 @@ body {
     }
 
     .dropdown:hover {
-        background-color: #ffc90e;
+        background-color: #ff7f27;
     }
 
     .dropdown:hover .dropdown-button {
-        color: #7f7f7f;
-        background-color: #ffc90e;
+        color: white;
+        background-color: #ff7f27;
     }
 }
 
