@@ -41,7 +41,7 @@ body {
 @media (max-width: 1090px) {
     .top-logo {
         width: 50%;
-        min-width: 400px;
+        min-width: 300px;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -67,7 +67,7 @@ body {
         text-align: center;
         color: white;
         text-decoration: none;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -206,8 +206,8 @@ body {
 }
 
 .mobile .img-fh-center {
-    width: 200%;
-    translate: -27% -23%;
+    width: 300%;
+    translate: -35% -23%;
 }
 
 .img-intra {
@@ -356,7 +356,7 @@ footer p {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 0;
+        margin-bottom: 5px;
         margin-top: -10px;
     }
 
