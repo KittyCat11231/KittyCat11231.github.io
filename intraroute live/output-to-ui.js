@@ -796,6 +796,6 @@ function outputToUI() {
 }
 
 document.getElementById("submit-button").addEventListener('click', function () {
-    $('html,body').scrollTop(0);
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
     outputToUI();
 })
