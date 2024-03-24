@@ -1,0 +1,449 @@
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+body {
+    margin: 0;
+}
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    padding-bottom: 200px;
+}
+
+.img-box {
+    display: flex;
+    justify-content: center;
+    padding-top: 45px;
+}
+
+.top-logo {
+    height: 80px;
+}
+
+.gray-box-before {
+    background-color: #4d4d4d;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 50px;
+    border-radius: 50px;
+}
+
+.gray-box-before h1 {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.gray-box-before p {
+    color: white;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.p-big-margin-top {
+    margin-top: 50px;
+}
+
+.p-little-margin-top {
+    margin-top: -20px;
+}
+
+.p2 {
+    margin-top: 50px;
+}
+
+.p3 {
+    margin-top: 50px;
+}
+
+.p4 {
+    margin-top: -20px;
+    margin-bottom: 65px;
+    font-weight: 600;
+}
+
+.p-big-margin-bottom {
+    margin-bottom: 65px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.gray-box-before label {
+    color: white;
+}
+
+.select-fields {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 15px;
+}
+
+label {
+    margin-right: 5px;
+    font-size: 1.2rem;
+}
+
+select {
+    margin-left: 5px;
+    font-size: 1.1rem;
+}
+
+.button-box {
+    display: flex;
+    justify-content: center;
+}
+
+#submit-button {
+    background-color: #4d4d4d;
+    color: white;
+    border: 3px solid white;
+    border-radius: 50px;
+    width: 30%;
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 35px;
+    margin-bottom: 45px;
+}
+
+#submit-button:hover {
+    background-color: white;
+    color: #4d4d4d;
+}
+
+#back-button-box {
+    margin-top: 50px;
+}
+
+#back-button {
+    background-color: white;
+    color: #4d4d4d;
+    border: 3px solid #4d4d4d;
+    border-radius: 50px;
+    width: 300px;
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 35px;
+    margin-bottom: 45px;
+}
+
+#back-button:hover {
+    background-color: #4d4d4d;
+    color: white;
+}
+
+.box-logo {
+    width: 150px;
+}
+
+footer p {
+    text-align: center;
+    color: #7f7f7f;
+    font-size: 1rem;
+}
+
+.footer-bar-1 {
+    background-color: #ffc90e;
+    width: 100%;
+    height: 15px;
+}
+
+.footer-bar-2 {
+    background-color: #ff7f27;
+    width: 100%;
+    height: 35px;
+    margin-bottom: 15px;
+}
+
+.bottom-logo {
+    width: 500px;
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 13px;
+    margin-top: 5px;
+}
+
+footer {
+    margin-top: 100px;
+    margin-bottom: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer-below {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.rest-of-footer {
+    flex-grow: 1;
+}
+
+.footer-notes {
+    margin-top: 15px;
+}
+
+.footer-notes p {
+    text-align: center;
+    color: #4d4d4d;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.intraroute-footer-logo {
+    height: 70px;
+    margin-top: 100px;
+}
+
+.copyright {
+    margin-top: 30px;
+}
+
+.designed-by {
+    margin-top: -13px;
+}
+
+/* Styles for route segment boxes: */
+
+.stop-box {
+    background-color: #4d4d4d;
+    width: 800px;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border-radius: 50px;
+}
+
+.start-transfer-end {
+    font-size: 2rem;
+}
+
+.stop-box p {
+    color: white;
+    line-height: 115%;
+}
+
+.segment {
+    width: 800px;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 50px;
+    border-radius: 50px;
+}
+
+.segment-bahn-mainline {
+    background-color: #5cdbd5
+}
+
+.segment-bahn-express {
+    background-color: #f27fa5
+}
+
+.segment-bahn-branch {
+    background-color: #dc0000
+}
+
+.segment-bahn-shuttle {
+    background-color: #00d93a
+}
+
+.segment-bahn-default {
+    background-color: #4d4d4d
+}
+
+.stop-box .mode-logo-box {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+
+.stop-box .mode-logo {
+    height: 50px;
+    margin-top: 50px;
+}
+
+.segment .mode-logo-box {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.segment .mode-logo {
+    height: 50px;
+    margin-top: -15px;
+    margin-right: -5px;
+    margin-bottom: 25px;
+}
+
+.route-info-box {
+   display: flex; 
+   justify-content: left;
+}
+
+.bullet {
+    height: 115px;
+    
+}
+
+.route-info-text-box {
+    margin-left: 30px;
+    margin-top: -30px;
+}
+
+.segment p {
+    color: white;
+    line-height: 115%;
+}
+
+.route-name {
+    font-size: 3.5rem;
+}
+
+.route-towards {
+    font-size: 2rem;
+    margin-top: -45px;
+}
+
+.route-destination {
+    font-size: 2.5rem;
+    margin-top: -20px;
+    margin-bottom: 75px;
+}
+
+.destination-stop-name {
+    font-size: 2rem;
+}
+
+.stop-city {
+    font-size: 4rem;
+}
+
+.stop-code {
+    font-size: 2rem;
+    margin-left: 10px;
+}
+
+.stop-stop-name {
+    font-size: 2.5rem;
+    margin-top: -5px;
+}
+
+.arrow-and-stops {
+    display: flex;
+    justify-content: left;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.arrow {
+    width: 100px;
+}
+
+.num-of-stops {
+    font-size: 2rem;
+    margin-top: 85px;
+    margin-left: 10px;
+}
+
+.stop-metadata {
+    font-size: 1.5rem;
+    margin-top: -20px;
+}
+
+.other-routes {
+    width: 900px;
+    margin-left: -50px;
+    display: flex;
+    margin-bottom: 70px;
+    margin-top: -25px;
+    height: 75px;
+    justify-content: space-between;
+}
+
+.other-routes-bahn-multi {
+    background-color: white;
+}
+
+.other-routes-bahn-mainline {
+    background-color: #5cdbd5;
+}
+
+.other-routes-bahn-express {
+    background-color: #f27fa5;
+}
+
+.other-routes-bahn-branch {
+    background-color: #dc0000;
+}
+
+.other-routes-bahn-shuttle {
+    background-color: #00d93a;
+}
+
+.other-routes p {
+    font-size: 2.2rem;
+    margin-left: 50px;
+    margin-top: 18px;
+}
+
+.other-routes-bahn-multi p {
+    color: #4d4d4d
+}
+
+.other-routes-bahn-mainline p, .other-routes-bahn-express p, .other-routes-bahn-branch p, .other-routes-bahn-shuttle p {
+    color: white
+}
+
+.other-routes-left {
+    display: flex;
+    justify-content: left;
+}
+
+.bullet-small {
+    height: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+}
+
+.mode-logo-small-box {
+    display: flex;
+    justify-content: right;
+}
+
+.mode-logo-small {
+    height: 35px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 50px;
+}
+
+/* Styles below are to be assigned to scripts by JavaScript */
+
+.display-none {
+    display: none;
+}
