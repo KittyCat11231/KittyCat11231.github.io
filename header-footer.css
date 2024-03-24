@@ -7,6 +7,18 @@ body {
     margin: 0;
 }
 
+@media (max-width: 1090px) {
+    .desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 1090px) {
+    .mobile {
+        display: none;
+    }
+}
+
 @media (min-width: 1090px) {
     .top-logo {
         width: 400px;
@@ -69,6 +81,46 @@ body {
         text-decoration: none;
         font-size: 1.3rem;
     }
+
+    .dropdown-button {
+        background-color: #ff7f27;
+        color: white;
+        border: none;
+        font-size: 1.3rem;
+    }
+
+    .dropdown {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        width: 100%;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-size: 1.3rem;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover {
+        background-color: #ffc90e;
+    }
+
+    .dropdown:hover .dropdown-button {
+        color: #7f7f7f
+    }
 }
 
 .intra-button:has(a:hover) {
@@ -97,6 +149,41 @@ body {
 
 .about-button a:hover, .other-button a:hover {
     color: #7f7f7f;
+}
+
+.intra-mobile {
+    color: white;
+    background-color: #4d4d4d;
+}
+
+.roy-mobile {
+    color: white;
+    background-color: #5a86a8;
+}
+
+.mbs-mobile {
+    color: white;
+    background-color: blue;
+}
+
+.bart-mobile {
+    color: white;
+    background-color: #30acdf;
+}
+
+.fossack-mobile {
+    color: white;
+    background-color: #003875;
+}
+
+.other-mobile {
+    color: white;
+    background-color: #ff7f27;
+}
+
+.about-mobile {
+    color: #7f7f7f;
+    background-color: #ffc90e;
 }
 
 .yellow-bar {
