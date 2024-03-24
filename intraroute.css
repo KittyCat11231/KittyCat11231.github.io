@@ -150,6 +150,46 @@ select {
     width: 150px;
 }
 
+.pseudo-footer {
+    margin-top: -75px;
+}
+
+.pseudo-footer p {
+    color: #4d4d4d;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.pseudo-footer .big-margin {
+    margin-top: 75px;
+}
+
+.pseudo-footer .mid-margin {
+    margin-top: 35px;
+}
+
+.pseudo-footer .small-margin {
+    margin-top: -17px;
+}
+
+.img-box-2 {
+    display: flex;
+    justify-content: center;
+}
+
+.intraroute-bottom-logo {
+    height: 60px;
+}
+
+
+
+
+
+
+
+
+
+
 /* Styles for route segment boxes: */
 
 .stop-box {
