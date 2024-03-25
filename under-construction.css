@@ -271,5 +271,6 @@
 @media (max-width: 800px) {
     .intraroute-box {  
         margin-top: -50px;
+        margin-bottom: 50px;
     }
 }
