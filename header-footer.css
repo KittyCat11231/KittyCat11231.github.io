@@ -77,7 +77,6 @@ body {
     }
 
     .dropdown-content {
-        display: none;
         position: absolute;
         width: 100%;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -90,19 +89,6 @@ body {
         text-decoration: none;
         display: block;
         font-size: 1.3rem;
-    }
-
-    .dropdown:active .dropdown-content {
-        display: block;
-    }
-
-    .dropdown:active {
-        background-color: #ff7f27;
-    }
-
-    .dropdown:active .dropdown-button {
-        color: white;
-        background-color: #ff7f27;
     }
 }
 
@@ -251,4 +237,12 @@ footer {
 
 .designed-by {
     margin-top: -18px;
+}
+
+.no-display {
+    display: none;
+}
+
+.block-display {
+    display: block;
 }
