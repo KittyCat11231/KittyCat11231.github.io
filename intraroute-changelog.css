@@ -70,3 +70,7 @@ h1 {
 #back-button:hover a {
     color: white;
 }
+
+h2, p, li {
+    color: #4d4d4d;
+}
