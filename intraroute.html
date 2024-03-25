@@ -11,35 +11,52 @@
         <title>IntraRoute | Feline Holdings</title>
     </head>
     <body>
+        <!-- Site-wide header -->
         <header>
             <a href="https://bit.ly/FelineHoldingsSignUp">
                 <img class="top-logo" src="logos/feline-holdings-large.svg" alt="feline holdings">
             </a>
-            <nav>
-                <div class="nav-button intra-button">
+            <nav class="desktop">
+                <div class="nav-button intra-button desktop">
                     <a href="https://bit.ly/FelineHoldingsSignUp">Intra</a>
                 </div>
-                <div class="nav-button roy-button">
+                <div class="nav-button roy-button desktop">
                     <a href="https://bit.ly/FelineHoldingsSignUp">Roy Disney</a>
                 </div>
-                <div class="nav-button mbs-button">
+                <div class="nav-button mbs-button desktop">
                     <a href="https://bit.ly/FelineHoldingsSignUp">MBS</a>
                 </div>
-                <div class="nav-button bart-button">
+                <div class="nav-button bart-button desktop">
                     <a href="https://bit.ly/FelineHoldingsSignUp">BART</a>
                 </div>
-                <div class="nav-button fossack-button">
+                <div class="nav-button fossack-button desktop">
                     <a href="https://bit.ly/FelineHoldingsSignUp">Fossack Notseca</a>
                 </div>
-                <div class="nav-button other-button">
+                <div class="nav-button other-button desktop">
                     <a href="https://bit.ly/FelineHoldingsSignUp">Other Companies</a>
                 </div>
-                <div class="nav-button about-button">
+                <div class="nav-button about-button desktop">
                     <a href="https://bit.ly/FelineHoldingsSignUp">About Us</a>
+                </div>
+            </nav>
+            <nav class="mobile">
+                <div class="dropdown mobile">
+                    <button id="dropdown-button" class="dropdown-button mobile">Explore Feline Holdings</button>
+                    <div id="dropdown-content" class="dropdown-content mobile">
+                    <a class="intra-mobile mobile" href="https://bit.ly/FelineHoldingsSignUp">Intra</a>
+                    <a class="roy-mobile mobile" href="https://bit.ly/FelineHoldingsSignUp">Roy Disney</a>
+                    <a class="mbs-mobile mobile" href="https://bit.ly/FelineHoldingsSignUp">MBS</a>
+                    <a class="bart-mobile mobile" href="https://bit.ly/FelineHoldingsSignUp">BART</a>
+                    <a class="fossack-mobile mobile" href="https://bit.ly/FelineHoldingsSignUp">Fossack Notseca</a>
+                    <a class="other-mobile mobile" href="https://bit.ly/FelineHoldingsSignUp">Other Companies</a>
+                    <a class="about-mobile mobile" href="https://bit.ly/FelineHoldingsSignUp">About Us</a>
+                    </div>
                 </div>
             </nav>
             <div class="yellow-bar"></div>
         </header>
+
+        <!-- Main page content -->
         <div class="page-container">
             <div class="content-wrap">
                 <div class="img-box">
@@ -148,11 +165,12 @@
                 <p class="small-margin">Designed by Roy Disney Softworks. A Feline Holdings company.</p>
             </div>
         </div>
+        <!-- Site-wide footer -->
         <footer>
             <div class="footer-bar-1"></div>
             <div class="footer-bar-2"></div>
             <div class="footer-below">
-                <a href="https://bit.ly/FelineHoldingsSignUp">
+                <a href="intraroute live/intraroute.html">
                     <img class="bottom-logo" src="logos/feline-holdings-large.svg" alt="feline holdings">
                 </a>
                 <div class="rest-of-footer">
@@ -163,6 +181,8 @@
                 </div>
             </div>
         </footer>
+        <!-- IMPORTANT: include this script on ALL pages: -->
+        <script src="mobile-menu.js"></script>
         <script type="module" src="intraroute/pathfinding.js"></script>
         <script src="intraroute/back-button.js"></script>
         <script type="module" src="intraroute/output-to-ui.js"></script>
