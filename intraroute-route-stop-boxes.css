@@ -1,0 +1,393 @@
+@media (min-width: 930px) {
+    .mobile {
+        display: none;
+    }
+
+    .stop-box {
+        background-color: #4d4d4d;
+        width: 800px;
+        height: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20px;
+        padding-bottom: 50px;
+        border-radius: 50px;
+    }
+
+    .start-transfer-end {
+        font-size: 2rem;
+    }
+
+    .route-name {
+        font-size: 3.5rem;
+    }
+    
+    .route-towards {
+        font-size: 2rem;
+        margin-top: -45px;
+    }
+    
+    .route-destination {
+        font-size: 2.5rem;
+        margin-top: -20px;
+        margin-bottom: 75px;
+    }
+
+    .destination-stop-name {
+        font-size: 2rem;
+    }
+    
+    .stop-city {
+        font-size: 4rem;
+    }
+    
+    .stop-code {
+        font-size: 2rem;
+        margin-left: 10px;
+    }
+    
+    .stop-stop-name {
+        font-size: 2.5rem;
+        margin-top: -5px;
+    }
+
+    .stop-box .mode-logo {
+        height: 50px;
+        margin-top: 50px;
+    }
+
+    .segment {
+        width: 800px;
+        height: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        padding: 50px;
+        border-radius: 50px;
+    }
+
+    .segment .mode-logo {
+        height: 50px;
+        margin-top: -15px;
+        margin-right: -5px;
+        margin-bottom: 25px;
+    }
+
+    .bullet {
+        height: 115px;
+    }
+
+    .route-info-text-box {
+        margin-left: 30px;
+        margin-top: -30px;
+    }
+
+    .arrow-and-stops {
+        display: flex;
+        justify-content: left;
+        margin-top: 75px;
+        margin-bottom: 75px;
+    }
+    
+    .arrow {
+        width: 100px;
+    }
+
+    .num-of-stops {
+        font-size: 2rem;
+        margin-top: 85px;
+        margin-left: 10px;
+    }
+
+    .other-routes {
+        width: 900px;
+        margin-left: -50px;
+        display: flex;
+        margin-bottom: 70px;
+        margin-top: -25px;
+        height: 75px;
+        justify-content: space-between;
+    }
+
+    .other-routes p {
+        font-size: 2.2rem;
+        margin-left: 50px;
+        margin-top: 18px;
+    }
+
+    .segment p {
+        color: white;
+        line-height: 115%;
+    }
+
+    .stop-metadata {
+        font-size: 1.5rem;
+        margin-top: -20px;
+    }
+
+    .bullet-small {
+        height: 50px;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 15px;
+    }
+
+    .mode-logo-small {
+        height: 35px;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 930px) {
+    .desktop {
+        display: none;
+    }
+
+    .stop-box {
+        background-color: #4d4d4d;
+        width: 90%;
+        height: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        padding-top: 10px;
+        padding-bottom: 40px;
+        border-radius: 50px;
+    }
+
+    .start-transfer-end {
+        font-size: 1.3rem;
+        margin-left: 5%;
+    }
+
+    .route-name {
+        font-size: 2rem;
+        margin-left: 5%;
+    }
+    
+    .route-towards {
+        font-size: 1.3rem;
+        margin-top: -25px;
+        margin-left: 5%;
+    }
+    
+    .route-destination {
+        font-size: 2rem;
+        margin-top: -15px;
+        margin-bottom: 75px;
+        margin-left: 5%;
+    }
+
+    .route-destination-name {
+        margin-top: -69px;
+        margin-bottom: 75px;
+        margin-left: 5%;
+    }
+
+    .segment p {
+        color: white;
+        line-height: 115%;
+    }
+
+    .destination-stop-name {
+        font-size: 1.5rem;
+    }
+    
+    .stop-city {
+        font-size: 2rem;
+        margin-left: 5%;
+    }
+    
+    .stop-code {
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+    
+    .stop-stop-name {
+        font-size: 1.5rem;
+        margin-top: -8px;
+        margin-left: 5%;
+    }
+
+    .stop-box .mode-logo {
+        height: 35px;
+        margin-top: 15px;
+        margin-left: 5%;
+    }
+
+    #back-button {
+        margin-top: 0px;
+    }
+
+    .segment {
+        width: 90%;
+        height: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-top: 10px;
+        padding-bottom: 35px;
+        border-radius: 50px;
+    }
+
+    .segment .mode-logo {
+        height: 35px;
+        margin-top: 20px;
+        margin-right: 25px;
+        margin-bottom: 25px;
+    }
+
+    .bullet {
+        height: 80px;
+        margin-left: 5%;
+    }
+
+    .route-info-text-box {
+        margin-left: 20px;
+        margin-top: -25px;
+        width: 80%
+    }
+
+    .arrow-and-stops {
+        display: flex;
+        justify-content: left;
+        margin-top: 55px;
+        margin-bottom: 55px;
+        margin-left: 5%;
+    }
+    
+    .arrow {
+        width: 55px;
+    }
+
+    .num-of-stops {
+        font-size: 1.2rem;
+        margin-top: 45px;
+        margin-left: 10px;
+    }
+
+    .other-routes {
+        width: 100%;
+        display: flex;
+        margin-bottom: 40px;
+        margin-top: 25px;
+        height: 60px;
+        justify-content: space-between;
+    }
+
+    .other-routes p {
+        font-size: 1.6rem;
+        margin-left: 40%;
+        margin-top: 15px;
+    }
+
+    .stop-metadata {
+        font-size: 1.2rem;
+        margin-top: -10px;
+        margin-left: 5%;
+    }
+
+    .bullet-small {
+        height: 40px;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 15px;
+    }
+
+    .mode-logo-small {
+        height: 25px;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 25%;
+    }
+}
+
+.stop-box p {
+    color: white;
+    line-height: 115%;
+}
+
+.segment-bahn-mainline {
+    background-color: #5cdbd5
+}
+
+.segment-bahn-express {
+    background-color: #f27fa5
+}
+
+.segment-bahn-branch {
+    background-color: #dc0000
+}
+
+.segment-bahn-shuttle {
+    background-color: #00d93a
+}
+
+.segment-bahn-default {
+    background-color: #4d4d4d
+}
+
+.stop-box .mode-logo-box {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+
+.segment .mode-logo-box {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.route-info-box {
+   display: flex; 
+   justify-content: left;
+}
+
+.other-routes-bahn-multi {
+    background-color: white;
+}
+
+.other-routes-bahn-mainline {
+    background-color: #5cdbd5;
+}
+
+.other-routes-bahn-express {
+    background-color: #f27fa5;
+}
+
+.other-routes-bahn-branch {
+    background-color: #dc0000;
+}
+
+.other-routes-bahn-shuttle {
+    background-color: #00d93a;
+}
+
+.other-routes-bahn-multi p {
+    color: #4d4d4d
+}
+
+.other-routes-bahn-mainline p, .other-routes-bahn-express p, .other-routes-bahn-branch p, .other-routes-bahn-shuttle p {
+    color: white
+}
+
+.other-routes-left {
+    display: flex;
+    justify-content: left;
+}
+
+.mode-logo-small-box {
+    display: flex;
+    justify-content: right;
+}
+
+.display-none {
+    display: none;
+}

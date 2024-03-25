@@ -346,7 +346,7 @@ const bahnZQccw = {
 
 routesMap.set('bahnZQccw', bahnZQccw);
 
-const fallbackImg = 'assets/intrabahn/FelineNoImage.png'
+const fallbackImg = 'intraroute/assets/intrabahn/FelineNoImage.png'
 
 function stopBox(stop, typeStartTransferEnd, documentId) {
 
@@ -570,7 +570,9 @@ function bahnRouteBox(routes, stop1, stop2, numOfStops, documentId) {
             <div class="route-info-text-box">
                 <p class="route-info-text route-name bold">${route1.routeName}</p>
                 <p class="route-info-text route-towards">towards</p>
-                <p class="route-info-text route-destination"><span class="destination-city bold">${route1.terminusCity}</span> <span class="destination-stop-name">${terminusStopName ?? ""}</span></p>
+                <p class="route-info-text route-destination desktop"><span class="destination-city bold">${route1.terminusCity}</span> <span class="destination-stop-name">${terminusStopName ?? ""}</span></p>
+                <p class="route-info-text route-destination mobile"><span class="destination-city bold">${route1.terminusCity}</span></p>
+                <p class="route-info-text route-destination-name mobile"><span class="destination-stop-name">${terminusStopName ?? ""}</span></p>
             </div>
         </div>
         <div class="other-routes other-routes-bahn-${multiType} ${displayClassSingleOtherRoute ?? ""}">
@@ -628,7 +630,7 @@ function bahnZQrouteBoxZQLtoZQT(documentId) {
             <div class="route-info-text-box">
                 <p class="route-info-text route-name bold">Zaquar Shuttle</p>
                 <p class="route-info-text route-towards">towards</p>
-                <p class="route-info-text route-destination"><span class="destination-city bold">Zaquar</span> <span class="destination-stop-name">Tanzanite Station</span></p>
+                <p class="route-info-text route-destination"><span class="destination-city bold">Zaquar</span> <br class="mobile"><span class="destination-stop-name">Tanzanite Station</span></p>
             </div>
         </div>
         <p class="stop-city-code"><span class="stop-city bold">Zaquar</span> <span class="stop-code">(ZQL)</span></p>
@@ -659,7 +661,7 @@ function bahnZQrouteBoxZQTtoZQL(documentId) {
             <div class="route-info-text-box">
                 <p class="route-info-text route-name bold">Zaquar Shuttle</p>
                 <p class="route-info-text route-towards">towards</p>
-                <p class="route-info-text route-destination"><span class="destination-city bold">Zaquar</span> <span class="destination-stop-name">Loreen Terminal</span></p>
+                <p class="route-info-text route-destination"><span class="destination-city bold">Zaquar</span> <br class="mobile"><span class="destination-stop-name">Loreen Terminal</span></p>
             </div>
         </div>
         <p class="stop-city-code"><span class="stop-city bold">Zaquar</span> <span class="stop-code">(ZQT)</span></p>
@@ -689,7 +691,7 @@ function bahnZQrouteBoxZQTtoZQA(documentId) {
             <div class="route-info-text-box">
                 <p class="route-info-text route-name bold">Zaquar Shuttle</p>
                 <p class="route-info-text route-towards">towards</p>
-                <p class="route-info-text route-destination"><span class="destination-city bold">Zaquar</span> <span class="destination-stop-name">Air & Sea Ports</span></p>
+                <p class="route-info-text route-destination"><span class="destination-city bold">Zaquar</span> <br class="mobile"><span class="destination-stop-name">Air & Sea Ports</span></p>
             </div>
         </div>
         <p class="stop-city-code"><span class="stop-city bold">Zaquar</span> <span class="stop-code">(ZQT)</span></p>
@@ -719,7 +721,7 @@ function bahnZQrouteBoxZQAtoZQT(documentId) {
             <div class="route-info-text-box">
                 <p class="route-info-text route-name bold">Zaquar Shuttle</p>
                 <p class="route-info-text route-towards">towards</p>
-                <p class="route-info-text route-destination"><span class="destination-city bold">Zaquar</span> <span class="destination-stop-name">Tanzanite Station</span></p>
+                <p class="route-info-text route-destination"><span class="destination-city bold">Zaquar</span> <br class="mobile"><span class="destination-stop-name">Tanzanite Station</span></p>
             </div>
         </div>
         <p class="stop-city-code"><span class="stop-city bold">Zaquar</span> <span class="stop-code">(ZQA)</span></p>
