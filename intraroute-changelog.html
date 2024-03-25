@@ -5,10 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="header-footer.css">
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="intraroute-changelog.css">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="logos/feline-holdings-small.svg">
-        <title>Test Page | Feline Holdings</title>
+        <link rel="icon" type="image/x-icon" href="logos/intra-i.svg">
+        <title>IntraRoute Changelog | Feline Holdings</title>
     </head>
     <body>
         <div class="page-container">
@@ -58,72 +59,54 @@
                     <div class="yellow-bar"></div>
                 </header>
                 <!-- Main page content -->
-                <main id="main-content">
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                </main>
-        </div> 
-        <!-- Site-wide footer -->
-        <footer>
-            <div class="footer-bar-1"></div>
-            <div class="footer-bar-2"></div>
-            <div class="footer-below">
-                <a href="index">
-                    <img class="bottom-logo" src="logos/feline-holdings-large.svg" alt="feline holdings">
-                </a>
-                <div class="rest-of-footer">
-                    <div class="footer-notes">
-                        <p class="copyright">© 2014 - <script>document.write( new Date().getFullYear() );</script> Feline Holdings. All rights reserved.</p>
-                        <p class="designed-by">Designed by Roy Disney Softworks. A Feline Holdings company.</p>
+                <div id="main-content">
+                    <div class="top-logo-box">
+                        <img class="top-logo-intraroute" src="intraroute/logos/intraroute.svg" alt="IntraRoute">
+                    </div>
+                    <h1 class="title mid-bold">Version History & Changelog</h1>
+                    <div id="back-button-box">
+                        <div id="back-button">
+                            <a href="intraroute">
+                                Back to IntraRoute
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-field">
+                        <h2 class="underline">Alpha 1.0.0</h2>
+                        <p>Released on 3/25/2024</p>
+                        <ul>
+                            <li>IntraRoute is now live!</li>
+                            <li>Only IntraBahn lines are supported. All Intra services will be supported in future releases.</li>
+                            <li>
+                                Known issues:
+                                <ul>
+                                    <li>The bar that shows additional possible routes on trips with more than one route is sometimes the wrong color.</li>
+                                    <li>The desktop UI is scaled up too high.</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!-- IMPORTANT: include this script on ALL pages: -->
-        <script src="mobile-menu.js"></script>
+
+            <!-- Site-wide footer -->
+            <footer>
+                <div class="footer-bar-1"></div>
+                <div class="footer-bar-2"></div>
+                <div class="footer-below">
+                    <a href="index">
+                        <img class="bottom-logo" src="logos/feline-holdings-large.svg" alt="feline holdings">
+                    </a>
+                    <div class="rest-of-footer">
+                        <div class="footer-notes">
+                            <p class="copyright">© 2014 - <script>document.write( new Date().getFullYear() );</script> Feline Holdings. All rights reserved.</p>
+                            <p class="designed-by">Designed by Roy Disney Softworks. A Feline Holdings company.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- IMPORTANT: include this script on ALL pages: -->
+            <script src="mobile-menu.js"></script>
         </div>
     </body>
 </html>

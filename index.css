@@ -1,0 +1,31 @@
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+body {
+    margin: 0;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.mid-bold {
+    font-weight: 500;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+
+.content-wrap {
+  padding-bottom: 130px; /* MUST MATCH FOOTER HEIGHT!!!! */
+}

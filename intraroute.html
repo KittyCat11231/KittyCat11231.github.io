@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="intraroute.css">
         <link rel="stylesheet" href="intraroute-route-stop-boxes.css">
+        <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="header-footer.css">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -12,180 +13,182 @@
         <title>IntraRoute | Feline Holdings</title>
     </head>
     <body>
-        <!-- Site-wide header -->
-        <header>
-            <a href="https://bit.ly/FelineHoldingsSignUp">
-                <img class="top-logo" src="logos/feline-holdings-large.svg" alt="feline holdings">
-            </a>
-            <nav class="desktop">
-                <div class="nav-button intra-button desktop">
-                    <a href="https://bit.ly/FelineHoldingsSignUp">Intra</a>
-                </div>
-                <div class="nav-button roy-button desktop">
-                    <a href="https://bit.ly/FelineHoldingsSignUp">Roy Disney</a>
-                </div>
-                <div class="nav-button mbs-button desktop">
-                    <a href="https://bit.ly/FelineHoldingsSignUp">MBS</a>
-                </div>
-                <div class="nav-button bart-button desktop">
-                    <a href="https://bit.ly/FelineHoldingsSignUp">BART</a>
-                </div>
-                <div class="nav-button fossack-button desktop">
-                    <a href="https://bit.ly/FelineHoldingsSignUp">Fossack Notseca</a>
-                </div>
-                <div class="nav-button other-button desktop">
-                    <a href="https://bit.ly/FelineHoldingsSignUp">Other Companies</a>
-                </div>
-                <div class="nav-button about-button desktop">
-                    <a href="https://bit.ly/FelineHoldingsSignUp">About Us</a>
-                </div>
-            </nav>
-            <nav class="mobile">
-                <div class="dropdown mobile">
-                    <button id="dropdown-button" class="dropdown-button mobile">Explore Feline Holdings</button>
-                    <div id="dropdown-content" class="dropdown-content mobile">
-                    <a class="intra-mobile mobile" href="https://bit.ly/FelineHoldingsSignUp">Intra</a>
-                    <a class="roy-mobile mobile" href="https://bit.ly/FelineHoldingsSignUp">Roy Disney</a>
-                    <a class="mbs-mobile mobile" href="https://bit.ly/FelineHoldingsSignUp">MBS</a>
-                    <a class="bart-mobile mobile" href="https://bit.ly/FelineHoldingsSignUp">BART</a>
-                    <a class="fossack-mobile mobile" href="https://bit.ly/FelineHoldingsSignUp">Fossack Notseca</a>
-                    <a class="other-mobile mobile" href="https://bit.ly/FelineHoldingsSignUp">Other Companies</a>
-                    <a class="about-mobile mobile" href="https://bit.ly/FelineHoldingsSignUp">About Us</a>
-                    </div>
-                </div>
-            </nav>
-            <div class="yellow-bar"></div>
-        </header>
-
-        <!-- Main page content -->
-        <div id="main-content" class="page-container">
+        <div class="page-container">
             <div class="content-wrap">
-                <div class="img-box">
-                    <img class="top-logo-intraroute" src="intraroute/logos/intraroute.svg" alt="IntraRoute">
-             
+                <!-- Site-wide header -->
+                <header>
+                    <a href="index">
+                        <img class="top-logo" src="logos/feline-holdings-large.svg" alt="feline holdings">
+                    </a>
+                    <nav class="desktop">
+                        <div class="nav-button intra-button desktop">
+                            <a href="index">Intra</a>
+                        </div>
+                        <div class="nav-button roy-button desktop">
+                            <a href="index">Roy Disney</a>
+                        </div>
+                        <div class="nav-button mbs-button desktop">
+                            <a href="index">MBS</a>
+                        </div>
+                        <div class="nav-button bart-button desktop">
+                            <a href="index">BART</a>
+                        </div>
+                        <div class="nav-button fossack-button desktop">
+                            <a href="index">Fossack Notseca</a>
+                        </div>
+                        <div class="nav-button other-button desktop">
+                            <a href="index">Other Companies</a>
+                        </div>
+                        <div class="nav-button about-button desktop">
+                            <a href="index">About Us</a>
+                        </div>
+                    </nav>
+                    <nav class="mobile">
+                        <div class="dropdown mobile">
+                            <button id="dropdown-button" class="dropdown-button mobile">Explore Feline Holdings</button>
+                            <div id="dropdown-content" class="dropdown-content mobile">
+                            <a class="intra-mobile mobile" href="index">Intra</a>
+                            <a class="roy-mobile mobile" href="index">Roy Disney</a>
+                            <a class="mbs-mobile mobile" href="index">MBS</a>
+                            <a class="bart-mobile mobile" href="index">BART</a>
+                            <a class="fossack-mobile mobile" href="index">Fossack Notseca</a>
+                            <a class="other-mobile mobile" href="index">Other Companies</a>
+                            <a class="about-mobile mobile" href="index">About Us</a>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="yellow-bar"></div>
+                </header>
+                <!-- Main page content -->
+                <div id="main-content">
+                    <div class="img-box">
+                        <img class="top-logo-intraroute" src="intraroute/logos/intraroute.svg" alt="IntraRoute">
+                
+                    </div>
+                    <div id="gray-box-before" class="gray-box-before">
+                        <h1>IntraRoute Alpha 1.0.0</h1>
+                        <p class="p-big-margin-top">Welcome to Intra's alpha release of IntraRoute!</p>
+                        <p class="p-big-margin-top">Just put in an origin and destination,</p>
+                        <p class="p-little-margin-top">and we'll tell you where to go!</p>
+                        <p class="p-big-margin-top">IntraRoute currently supports IntraBahn lines only.</p>
+                        <p class="p-little-margin-top">Support for all other Intra services will come in a future release.</p>
+                        <p class="p-big-margin-top">Find any problems? Email us at:</p>
+                        <p class="p-little-margin-top p-big-margin-bottom bold">intra@felineholdings.com</p>
+                        <div class="select-fields" class="origin-field">
+                            <label for="origin-select" class="origin-label">Origin:</label>
+                            <select id="origin-select">
+                                <option value="unselected">Select an origin.</option>
+                                <option value="bahnKNX">Knoxford (KNX)</option>
+                                <option value="bahnSHC">Schillerton Cowling Street (SHC)</option>
+                                <option value="bahnSHD">Schillerton Division Street Terminal (SHD)</option>
+                                <option value="bahnWHO">Whiteley Olympia Boulevard (WHO)</option>
+                                <option value="bahnWHQ">Whiteley Quins Junction (WHQ)</option>
+                                <option value="bahnZQA">Zaquar Air & Sea Ports (ZQA)</option>
+                                <option value="bahnZQL">Zaquar Loreen Terminal (ZQL)</option>
+                                <option value="bahnZQT">Zaquar Tanzanite Station (ZQT)</option>
+                            </select>
+                        </div>
+                        <div class="select-fields" class="destination-field">
+                            <label for="destination-select" class="destination-label">Destination:</label>
+                            <select id="destination-select">
+                                <option value="unselected">Select a destination.</option>
+                                <option value="bahnKNX">Knoxford (KNX)</option>
+                                <option value="bahnSHC">Schillerton Cowling Street (SHC)</option>
+                                <option value="bahnSHD">Schillerton Division Street Terminal (SHD)</option>
+                                <option value="bahnWHO">Whiteley Olympia Boulevard (WHO)</option>
+                                <option value="bahnWHQ">Whiteley Quins Junction (WHQ)</option>
+                                <option value="bahnZQA">Zaquar Air & Sea Ports (ZQA)</option>
+                                <option value="bahnZQL">Zaquar Loreen Terminal (ZQL)</option>
+                                <option value="bahnZQT">Zaquar Tanzanite Station (ZQT)</option>
+                            </select>
+                        </div>
+                        <div class="button-box">
+                            <button id="submit-button">Find Route</button>
+                        </div>
+                        <img class="box-logo-desktop" src="intraroute/logos/intra-white.svg" alt="Intra">
+                        <div class="img-box-2 box-logo-box">
+                            <img class="box-logo-mobile" src="intraroute/logos/intra-white.svg" alt="Intra">
+                        </div>
+                    </div>
+                    <div id="back-button-box" class="button-box display-none">
+                        <button id="back-button">Find Different Route</button>
+                    </div>
+                    <div id="stop-box-0"></div>
+                    <div id="route-box-0"></div>
+                    <div id="stop-box-1"></div>
+                    <div id="route-box-1"></div>
+                    <div id="stop-box-2"></div>
+                    <div id="route-box-2"></div>
+                    <div id="stop-box-3"></div>
+                    <div id="route-box-3"></div>
+                    <div id="stop-box-4"></div>
+                    <div id="route-box-4"></div>
+                    <div id="stop-box-5"></div>
+                    <div id="route-box-5"></div>
+                    <div id="stop-box-6"></div>
+                    <div id="route-box-6"></div>
+                    <div id="stop-box-7"></div>
+                    <div id="route-box-7"></div>
+                    <div id="stop-box-8"></div>
+                    <div id="route-box-8"></div>
+                    <div id="stop-box-9"></div>
+                    <div id="route-box-9"></div>
+                    <div id="stop-box-10"></div>
+                    <div id="route-box-10"></div>
+                    <div id="stop-box-11"></div>
+                    <div id="route-box-11"></div>
+                    <div id="stop-box-12"></div>
+                    <div id="route-box-12"></div>
+                    <div id="stop-box-13"></div>
+                    <div id="route-box-13"></div>
+                    <div id="stop-box-14"></div>
+                    <div id="route-box-14"></div>
+                    <div id="stop-box-15"></div>
+                    <div id="route-box-15"></div>
+                    <div id="stop-box-16"></div>
+                    <div id="route-box-16"></div>
+                    <div id="stop-box-17"></div>
+                    <div id="route-box-17"></div>
+                    <div id="stop-box-18"></div>
+                    <div id="route-box-18"></div>
+                    <div id="stop-box-19"></div>
+                    <div id="route-box-19"></div>
+                    <div id="stop-box-20"></div>
+                    <div id="route-box-20"></div>
+                    <div class="pseudo-footer">
+                        <div class="img-box-2">
+                            <img src="intraroute/logos/intraroute-short.svg" class="intraroute-bottom-logo">
+                        </div>
+                        <p class="version">IntraRoute Alpha 1.0.0</p>
+                        <p class="small-margin">3/25/2024</p>
+                        <p class="small-margin">Created by kyle11231 with help from DNAmaster10 & scarycrumb.</p>
+                        <p class="small-margin"><a href="intraroute-changelog.html">Version history & changelog</a></p>
+                        <p class="big-margin">© <script src="intraroute/currentyear.js"></script> Intra. A Feline Holdings company.</p>
+                        <p class="small-margin">Designed by Roy Disney Softworks. A Feline Holdings company.</p>
+                    </div>
                 </div>
-                <div id="gray-box-before" class="gray-box-before">
-                    <h1>IntraRoute Alpha 1.0.0</h1>
-                    <p class="p-big-margin-top">Welcome to Intra's alpha release of IntraRoute!</p>
-                    <p class="p-big-margin-top">Just put in an origin and destination,</p>
-                    <p class="p-little-margin-top">and we'll tell you where to go!</p>
-                    <p class="p-big-margin-top">IntraRoute currently supports IntraBahn lines only.</p>
-                    <p class="p-little-margin-top">Support for all other Intra services will come in a future release.</p>
-                    <p class="p-big-margin-top">Find any problems? Email us at:</p>
-                    <p class="p-little-margin-top p-big-margin-bottom bold">intra@felineholdings.com</p>
-                    <div class="select-fields" class="origin-field">
-                        <label for="origin-select" class="origin-label">Origin:</label>
-                        <select id="origin-select">
-                            <option value="unselected">Select an origin.</option>
-                            <option value="bahnKNX">Knoxford (KNX)</option>
-                            <option value="bahnSHC">Schillerton Cowling Street (SHC)</option>
-                            <option value="bahnSHD">Schillerton Division Street Terminal (SHD)</option>
-                            <option value="bahnWHO">Whiteley Olympia Boulevard (WHO)</option>
-                            <option value="bahnWHQ">Whiteley Quins Junction (WHQ)</option>
-                            <option value="bahnZQA">Zaquar Air & Sea Ports (ZQA)</option>
-                            <option value="bahnZQL">Zaquar Loreen Terminal (ZQL)</option>
-                            <option value="bahnZQT">Zaquar Tanzanite Station (ZQT)</option>
-                        </select>
-                    </div>
-                    <div class="select-fields" class="destination-field">
-                        <label for="destination-select" class="destination-label">Destination:</label>
-                        <select id="destination-select">
-                            <option value="unselected">Select a destination.</option>
-                            <option value="bahnKNX">Knoxford (KNX)</option>
-                            <option value="bahnSHC">Schillerton Cowling Street (SHC)</option>
-                            <option value="bahnSHD">Schillerton Division Street Terminal (SHD)</option>
-                            <option value="bahnWHO">Whiteley Olympia Boulevard (WHO)</option>
-                            <option value="bahnWHQ">Whiteley Quins Junction (WHQ)</option>
-                            <option value="bahnZQA">Zaquar Air & Sea Ports (ZQA)</option>
-                            <option value="bahnZQL">Zaquar Loreen Terminal (ZQL)</option>
-                            <option value="bahnZQT">Zaquar Tanzanite Station (ZQT)</option>
-                        </select>
-                    </div>
-                    <div class="button-box">
-                        <button id="submit-button">Find Route</button>
-                    </div>
-                    <img class="box-logo-desktop" src="intraroute/logos/intra-white.svg" alt="Intra">
-                    <div class="img-box-2 box-logo-box">
-                        <img class="box-logo-mobile" src="intraroute/logos/intra-white.svg" alt="Intra">
-                    </div>
-                </div>
-                <div id="back-button-box" class="button-box display-none">
-                    <button id="back-button">Find Different Route</button>
-                </div>
-                <div id="stop-box-0"></div>
-                <div id="route-box-0"></div>
-                <div id="stop-box-1"></div>
-                <div id="route-box-1"></div>
-                <div id="stop-box-2"></div>
-                <div id="route-box-2"></div>
-                <div id="stop-box-3"></div>
-                <div id="route-box-3"></div>
-                <div id="stop-box-4"></div>
-                <div id="route-box-4"></div>
-                <div id="stop-box-5"></div>
-                <div id="route-box-5"></div>
-                <div id="stop-box-6"></div>
-                <div id="route-box-6"></div>
-                <div id="stop-box-7"></div>
-                <div id="route-box-7"></div>
-                <div id="stop-box-8"></div>
-                <div id="route-box-8"></div>
-                <div id="stop-box-9"></div>
-                <div id="route-box-9"></div>
-                <div id="stop-box-10"></div>
-                <div id="route-box-10"></div>
-                <div id="stop-box-11"></div>
-                <div id="route-box-11"></div>
-                <div id="stop-box-12"></div>
-                <div id="route-box-12"></div>
-                <div id="stop-box-13"></div>
-                <div id="route-box-13"></div>
-                <div id="stop-box-14"></div>
-                <div id="route-box-14"></div>
-                <div id="stop-box-15"></div>
-                <div id="route-box-15"></div>
-                <div id="stop-box-16"></div>
-                <div id="route-box-16"></div>
-                <div id="stop-box-17"></div>
-                <div id="route-box-17"></div>
-                <div id="stop-box-18"></div>
-                <div id="route-box-18"></div>
-                <div id="stop-box-19"></div>
-                <div id="route-box-19"></div>
-                <div id="stop-box-20"></div>
-                <div id="route-box-20"></div>
             </div>
-            <div class="pseudo-footer">
-                <div class="img-box-2">
-                    <img src="intraroute/logos/intraroute-short.svg" class="intraroute-bottom-logo">
+            <!-- Site-wide footer -->
+            <footer>
+                <div class="footer-bar-1"></div>
+                <div class="footer-bar-2"></div>
+                <div class="footer-below">
+                    <a href="index">
+                        <img class="bottom-logo" src="logos/feline-holdings-large.svg" alt="feline holdings">
+                    </a>
+                    <div class="rest-of-footer">
+                        <div class="footer-notes">
+                            <p class="copyright">© 2014 - <script>document.write( new Date().getFullYear() );</script> Feline Holdings. All rights reserved.</p>
+                            <p class="designed-by">Designed by Roy Disney Softworks. A Feline Holdings company.</p>
+                        </div>
+                    </div>
                 </div>
-                <p class="version">IntraRoute Alpha 1.0.0</p>
-                <p class="small-margin">3/32/2024</p>
-                <p class="small-margin">Created by kyle11231 with help from DNAmaster10 & scarycrumb.</p>
-                <p class="big-margin">© <script src="intraroute/currentyear.js"></script> Intra. A Feline Holdings company.</p>
-                <p class="small-margin">Designed by Roy Disney Softworks. A Feline Holdings company.</p>
-            </div>
+            </footer>
+            <!-- IMPORTANT: include this script on ALL pages: -->
+            <script src="mobile-menu.js"></script>
+            <script type="module" src="intraroute/pathfinding.js"></script>
+            <script src="intraroute/back-button.js"></script>
+            <script type="module" src="intraroute/output-to-ui.js"></script>
         </div>
-        <!-- Site-wide footer -->
-        <footer>
-            <div class="footer-bar-1"></div>
-            <div class="footer-bar-2"></div>
-            <div class="footer-below">
-                <a href="intraroute live/intraroute.html">
-                    <img class="bottom-logo" src="logos/feline-holdings-large.svg" alt="feline holdings">
-                </a>
-                <div class="rest-of-footer">
-                    <div class="footer-notes">
-                        <p class="copyright">© 2014 - <script>document.write( new Date().getFullYear() );</script> Feline Holdings. All rights reserved.</p>
-                        <p class="designed-by">Designed by Roy Disney Softworks. A Feline Holdings company.</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- IMPORTANT: include this script on ALL pages: -->
-        <script src="mobile-menu.js"></script>
-        <script type="module" src="intraroute/pathfinding.js"></script>
-        <script src="intraroute/back-button.js"></script>
-        <script type="module" src="intraroute/output-to-ui.js"></script>
     </body>
 </html>

@@ -1,12 +1,3 @@
-* {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-}
-
-body {
-    margin: 0;
-}
-
 @media (max-width: 900px) {
     .desktop {
         display: none;
@@ -26,7 +17,6 @@ body {
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 13px;
-        margin-top: 10px;
     }
 
     nav {
@@ -58,7 +48,6 @@ body {
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 13px;
-        margin-top: 10px;
     }
 
     .dropdown-button {
@@ -212,8 +201,10 @@ footer p {
 }
 
 footer {
-    margin-top: 75px;
-    margin-bottom: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 130px;
 }
 
 

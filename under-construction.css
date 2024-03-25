@@ -1,10 +1,10 @@
-@media (max-width: 1260px) {
+@media (max-width: 1400px) {
     .desktop-2 {
         display: none;
     }
 }
 
-@media (min-width: 1260px) {
+@media (min-width: 1400px) {
     .mobile-2 {
         display: none;
     }
@@ -23,7 +23,7 @@
 
 .mobile-2 .content {
     width: 100%;
-    height: 500px;
+    height: 250px;
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
@@ -79,13 +79,12 @@
 .mobile-2 .img-box {
     width: 100%;
     height: 450px;
-    margin-top: 75px;
     overflow: clip;
 }
 
 .mobile-2 .img-box-white {
     width: 100%;
-    height: 450px;
+    height: 250px;
     overflow: clip;
     background-color: white;
     display: flex;
@@ -127,8 +126,8 @@
 }
 
 .mobile-2 .img-fh {
-    height: 120%;
-    translate: 0 -5%;
+    height: 150%;
+    translate: 0 -7%;
 }
 
 .content-text {
@@ -141,12 +140,18 @@
     font-weight: 600;
 }
 
-.content-text h1 {
+.desktop-2 .content-text h1 {
     font-size: 3.5rem;
+    line-height: 120%;
+}
+
+.mobile-2 .content-text h1 {
+    font-size: 2.5rem;
+    line-height: 120%;
 }
 
 .mobile-2 h1 {
-    margin-top: 5px;
+    margin-top: 20px;
 }
 
 .descriptor-1 {
@@ -164,6 +169,11 @@
     margin-top: 30px;
 }
 
+.mobile-2 .descriptor-3 {
+    font-size: 1.3rem;
+    margin-top: 30px;
+}
+
 .button {
     border: 4px solid white;
     border-radius: 30px;
@@ -172,7 +182,8 @@
     width: 200px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 60px;
+    margin-top: 0px;
+    display: block;
 }
 
 .button p {
@@ -187,6 +198,10 @@
 
 .button:has(a:hover) {
     background-color: white;
+}
+
+.button:has(a:hover) p {
+    color: #4d4d4d;
 }
 
 .content-intra > .content-text > .button > a:hover > p {
@@ -211,4 +226,50 @@
 
 .content-other > .content-text > .button > a:hover > p {
     color: #ffc90e
+}
+
+.intraroute-box {
+    background-color: #4d4d4d;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 340px;
+    max-width: 800px;
+    width: 90%;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 50px;
+}
+
+.intraroute-box h1 {
+    text-align: center;
+    color: white;
+    display: block;
+    font-size: 2.3rem;
+}
+
+@media (min-width: 600px) {
+    .intraroute-logo {
+        height: 70px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .intraroute-logo {
+        height: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 800px) {
+    .intraroute-box {  
+        margin-top: -50px;
+    }
 }
