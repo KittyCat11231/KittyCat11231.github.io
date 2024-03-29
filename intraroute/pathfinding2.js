@@ -15,6 +15,7 @@ class Stop {
     shortestTime = Infinity;
     explored = false;
     previousStop;
+    routesToStop;
 
     // The value in the parenthesis in the constructor is what gets passed into a new Class.
     constructor(id) {
@@ -111,10 +112,14 @@ stopsMap.set('unselected', unselected);
 
 let finalPath;
 
+function findCommonElements(arr1, arr2) {
+    return arr1.filter(element => arr2.includes(element));
+}
+
 function pathfinding() {
 
     // If the start and end are the same or are not selected, none of the rest of this script will run.
-
+    
     if (start === unselected || end === unselected) {
         alert('You must choose an origin and destination!');
         location.reload();
@@ -151,229 +156,20 @@ function pathfinding() {
 
         while (unexploredStops.length > 0) {
 
-            /*
-            
-            This for loop checks every adjacent stop to the current stop and calculates the time between the current
-            stop and the adjacent stop.
-            
-            If this time is shorter than the existing shortest time for that stop, it becomes the new shortest time, and
-            the current stop is set as that stop's "previous stop" for use later in pathfinding.
-
-            The default shortest time for all stops except the start is infinity.
-
-            */
-
             for (let [key, value] of currentStop.adjacentStops) {
                 let adjStop = stopsMap.get(key);
                 let adjStopNewTime = currentStop.shortestTime + value.weight;
-                if (adjStopNewTime < adjStop.shortestTime) {
-                    adjStop.shortestTime = adjStopNewTime
+                let adjStopNewTimeAdjusted;
+                let commonRoutes = findCommonElements(currentStop.routesToStop, currentStop.adjacentStops.get(adjStop.id).routes)
+                if (commonRoutes.length < 1) {
+                    adjStopNewTimeAdjusted = adjStopNewTime + 10;
+                } else {
+                    adjStopNewTimeAdjusted = adjStopNewTime;
+                if (adjStopNewTimeAdjusted < adjStop.shortestTime) {
+                    adjStop.shortestTime = adjStopNewTime;
                     adjStop.previousStop = currentStop;
-                }
-            }
-
-            // Puts unexplored stops with a non-infinity shortest time in their own array.
-
-            let unexploredNonInfinity = [];
-
-            for (let i = 0; i < unexploredStops.length; i++) {
-                if (unexploredStops[i].shortestTime !== Infinity) {
-                    unexploredNonInfinity.push(unexploredStops[i]);
-                }
-            }
-
-            /*
-            
-            Creates an array with the shortest times of all unexplored stops (except infinity time ones),
-            then finds the smallest number.
-
-            */
-
-            let unexploredShortestTimes = [];
-
-            for (let i = 0; i < unexploredNonInfinity.length; i++) {
-                unexploredShortestTimes.push(unexploredNonInfinity[i].shortestTime)
-            }
-
-            let unexploredShortestTimeMin = Math.min(...unexploredShortestTimes);
-
-            /*
-            
-            Checks all unexplored stops (except infinity time ones). Once it finds a stop matching the shortest
-            time found by the code above, it sets that to the current stop.
-
-            */
-
-            for (let i = 0; i < unexploredNonInfinity.length; i++) {
-                if (unexploredNonInfinity[i].shortestTime === unexploredShortestTimeMin) {
-                    currentStop = unexploredNonInfinity[i];
-                    break;
-                }
-            }
-
-            // Sets the current stop as explored and edits the corresponding arrays accordingly.
-
-            currentStop.explored = true;
-            exploredStops.push(currentStop);
-
-            function removeFromUnexploredStops(stop) {
-                let newArray = unexploredStops.filter((value) => value !== stop);
-                return newArray;
-            }
-
-            unexploredStops = removeFromUnexploredStops(currentStop);
-
-            /*
-            
-            If the new current stop is the destination set by the user, great! We just found the shortest time to the
-            destination and logged the "previous stop" for every stop along the way.
-
-            Otherwise, the loop continues again with the new current stop.
-            
-            */
-
-            if (currentStop === end) {
-                break;
-            }
-
-        }
-
-        /*
-        
-        Works backwards with the "previousStop" values of each stop starting at the end until it reaches the start, putting
-        together a "path" array of all stops on the fastest route from the origin to the destination.
-
-        */
-
-        let path = [currentStop];
-
-        while (path[0].previousStop) {
-            path.unshift(path[0].previousStop);
-        }
-
-        /* 
-        
-        For each stop in the path array, checks all adjacent stops until it finds the one matching the next stop in the
-        path array. Then, pushes the routes from the current stop it's looking at to that adjacent stop into a corresponding
-        index in a new array, routesForPath.
-        
-        */
-
-        let routesForPath = [];
-
-        // Big loop loops through every stop in the "path" array.
-        for (let i = 0; i < path.length; i++) {
-            // Small loop checks every adjacent stop of the current "path" stop.
-            for (let [key, value] of path[i].adjacentStops) {
-                if (path[i] === end) {
-                    break;
-                }
-                // If the adjacent stop of the current stop in "path" is the same as the next stop in "path".
-                if (key === path[i + 1].id) {
-                    routesForPath.push(value.routes);
-                    break;
-                }
-            }
-        }
-
-        function findCommonElements(arr1, arr2) {
-            return arr1.filter(element => arr2.includes(element));
-        }
-
-        // Filters the routesForPath array. If two adjacent legs of the trip have routes in common, removes any other routes.
-
-        let routesForPathFiltered = routesForPath;
-
-        for (let i = 0; i < routesForPath.length; i++) {
-            if (!(routesForPath[i + 1])) {
-                break;
-            }
-            let commonRoutes = findCommonElements(routesForPath[i], routesForPath[i + 1]);
-            if (commonRoutes.length > 0) {
-                routesForPathFiltered[i] = commonRoutes;
-                routesForPathFiltered[i + 1] = commonRoutes;
-            }
-        }
-
-        // Runs the filtered array through another filter for good measure.
-
-        for (let j = 0; j < 30; j++) {
-            let routesForPathFilteredCheck = routesForPathFiltered;
-            for (let i = 0; i < routesForPathFilteredCheck.length; i++) {
-                if (!(routesForPathFilteredCheck[i + 1])) {
-                    break;
-                }
-                if (findCommonElements(routesForPathFilteredCheck[i], routesForPathFilteredCheck[i + 1]).length > 0) {
-                    routesForPathFilteredCheck[i] = findCommonElements(routesForPathFilteredCheck[i], routesForPathFilteredCheck[i + 1]);
-                    routesForPathFilteredCheck[i + 1] = findCommonElements(routesForPathFilteredCheck[i], routesForPathFilteredCheck[i + 1]);
-                }
-                routesForPathFiltered = routesForPathFilteredCheck;
-            }
-            if (routesForPathFilteredCheck === routesForPathFiltered) {
-                break;
-            }
-        }
-
-        // Creates a preFinalPath array with pathSegment objects for the segment between every two stops.
-
-        class pathSegment {
-            constructor(firstStop, lastStop, routes, numOfStops) {
-                this.firstStop = firstStop;
-                this.lastStop = lastStop;
-                this.routes = routes;
-                this.numOfStops = numOfStops;
-            }
-        }
-
-        let preFinalPath = [];
-
-        for (let i = 0; i < path.length; i++) {
-            if (!(path[i + 1])) {
-                break;
-            }
-            preFinalPath[i] = new pathSegment(path[i].id, path[i + 1].id, routesForPathFiltered[i], 1)
-        }
-
-        // Creates a finalPath array, with pathSegments with the same routes condensed into a single object.
-
-        finalPath = preFinalPath;
-
-        function removeFromArray(array, removeMe) {
-            let newArray = array.filter((value) => value !== removeMe);
-            return newArray;
-        }
-
-        function deepEqual(a, b) {
-            return JSON.stringify(a) === JSON.stringify(b);
-        }
-
-        // Iterates through every pathSegment.
-        for (let i = 0; i < finalPath.length;) {
-            // Breaks the loop when at the end of the path.
-            if (!(finalPath[i + 1])) {
-                break;
-            }
-            // If the current pathSegment has the same routes as the next pathSegment, combines them together.
-            if (deepEqual(finalPath[i].routes, finalPath[i + 1].routes)) {
-                finalPath[i].lastStop = finalPath[i + 1].lastStop;
-                finalPath[i].numOfStops += 1;
-                finalPath = removeFromArray(finalPath, finalPath[i + 1])
-            } else {
-                i += 1;
-                // i only increases if the if statement is false, so the loop will always double check its work.
-            }
-        }
-
-    }
-
-}
-
-// Sets the user's origin and destination and runs pathfinding() after the user hits the submit button.
-
-document.getElementById("submit-button").addEventListener('click', function() {
-    start = stopsMap.get(document.getElementById("origin-select").value);
-    end = stopsMap.get(document.getElementById("destination-select").value);
-    pathfinding();
-})
-
-export { finalPath };
+                    if (commonRoutes.length < 1) {
+                        adjStop.routesToStop = commonRoutes;
+                    } else {
+                        adjStop.routesToStop = currentStop.adjacentStops.get(adjStop.id).routes;
+                    }
