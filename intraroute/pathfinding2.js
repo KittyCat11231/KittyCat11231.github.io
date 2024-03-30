@@ -15,7 +15,7 @@ class Stop {
     shortestTime = Infinity;
     explored = false;
     previousStop;
-    routesToStop;
+    routesToStop = false;
 
     // The value in the parenthesis in the constructor is what gets passed into a new Class.
     constructor(id) {
@@ -116,6 +116,15 @@ function findCommonElements(arr1, arr2) {
     return arr1.filter(element => arr2.includes(element));
 }
 
+function removeFromArray(array, removeMe) {
+    let newArray = array.filter((value) => value !== removeMe);
+    return newArray;
+}
+
+function deepEqual(a, b) {
+    return JSON.stringify(a) === JSON.stringify(b);
+}
+
 function pathfinding() {
 
     // If the start and end are the same or are not selected, none of the rest of this script will run.
@@ -155,21 +164,282 @@ function pathfinding() {
         */
 
         while (unexploredStops.length > 0) {
+            console.log('while loop start of pass');
+            
+            console.log('currentStop:');
+            console.log(currentStop.id);
+
+            /*
+
+            NEED TO UPDATE
+            
+            This for loop checks every adjacent stop to the current stop and calculates the time between the current
+            stop and the adjacent stop.
+
+            If there are no common routes between the pre
+            
+            If this time is shorter than the existing shortest time for that stop, it becomes the new shortest time, and
+            the current stop is set as that stop's "previous stop" for use later in pathfinding.
+
+            The default shortest time for all stops except the start is infinity.
+
+            NEED TO UPDATE
+
+            */
 
             for (let [key, value] of currentStop.adjacentStops) {
+                console.log('first for loop start of pass');
                 let adjStop = stopsMap.get(key);
+                console.log('adjStop:');
+                console.log(adjStop.id);
                 let adjStopNewTime = currentStop.shortestTime + value.weight;
+                console.log('adjStopNewTime:');
+                console.log(adjStopNewTime);
                 let adjStopNewTimeAdjusted;
-                let commonRoutes = findCommonElements(currentStop.routesToStop, currentStop.adjacentStops.get(adjStop.id).routes)
-                if (commonRoutes.length < 1) {
-                    adjStopNewTimeAdjusted = adjStopNewTime + 10;
+                let commonRoutes = [];
+
+                // This if else statement makes sure findCommonElements only runs if currentStop.routesToStop is defined.
+
+                if (currentStop.routesToStop) {
+                    console.log('if (currentStop.routesToStop) is true!');
+                    commonRoutes = findCommonElements(currentStop.adjacentStops.get(adjStop.id).routes, currentStop.routesToStop);
                 } else {
+                    console.log('if (currentStop.routesToStop) is false!');
+                }
+                console.log('commonRoutes:');
+                console.log(commonRoutes);
+
+                // If there are no common routes, +5 is added to the new time.
+
+                console.log('currentStop.routesToStop:');
+                console.log(currentStop.routesToStop);
+                if (commonRoutes.length > 0 || currentStop.routesToStop === false) {
+                    console.log('if (commonRoutes.length > 0 || currentStop.routesToStop === false) is true!');
                     adjStopNewTimeAdjusted = adjStopNewTime;
+                } else {
+                    console.log('if (commonRoutes.length > 0) is false!');
+                    adjStopNewTimeAdjusted = adjStopNewTime + 5;
+                }
+                console.log('adjStopNewTimeAdjusted:');
+                console.log(adjStopNewTimeAdjusted);
+
+                // If the new time is shorter than the existing shortest time, it becomes the new shortest time, and the other code below gets executed.
+                // Otherwise it goes back to the top of the for loop with the next adjacent stop.
+
                 if (adjStopNewTimeAdjusted < adjStop.shortestTime) {
-                    adjStop.shortestTime = adjStopNewTime;
+                    console.log('if (adjStopNewTimeAdjusted < adjStop.shortestTime) is true!');
+                    adjStop.shortestTime = adjStopNewTimeAdjusted;
+                    console.log('adjStop.shortestTime:');
+                    console.log(adjStop.shortestTime);
                     adjStop.previousStop = currentStop;
-                    if (commonRoutes.length < 1) {
+                    console.log('adjStop.previousStop:');
+                    console.log(adjStop.previousStop.id);
+
+                    /*
+                    
+                    If there are any common routes, the routesToStop for the adjacent and current stop are filtered to just the common routes,
+                    then the filter is run on the routesToStop for the current stop and the previous stop, then the previous stop and its previous stop,
+                    and so on.
+                    
+                    If there are no common routes between the routesToStop for the current stop being checked and its previous stop, the loop breaks.
+
+                    */ 
+
+                    if (commonRoutes.length > 0) {
+                        console.log('if (commonRoutes.length > 0) is true!');
                         adjStop.routesToStop = commonRoutes;
+                        currentStop.routesToStop = commonRoutes;
+                        console.log('adjStop.routesToStop:');
+                        console.log(adjStop.routesToStop);
+                        console.log('currentStop.routesToStop:');
+                        console.log(currentStop.routesToStop);
+                        let stopBeingChecked = currentStop;
+                        console.log('stopBeingChecked:');
+                        console.log(stopBeingChecked.id);
+
+                        while (stopBeingChecked.previousStop) {
+                            console.log('Start of while (stopBeingChecked.previousStop) loop pass');
+                            console.log('stopBeingChecked:');
+                            console.log(stopBeingChecked.id);
+                            console.log('stopBeingChecked.routesToStop:');
+                            console.log(stopBeingChecked.routesToStop);
+                            console.log('stopBeingChecked.previousStop:');
+                            console.log(stopBeingChecked.previousStop.id);
+                            console.log('stopBeingChecked.previousStop.routesToStop:');
+                            console.log(stopBeingChecked.previousStop.routesToStop);
+                            let commonRoutesPrevious;
+                            if (stopBeingChecked.previousStop.routesToStop !== false) {
+                                commonRoutesPrevious = findCommonElements(stopBeingChecked.routesToStop, stopBeingChecked.previousStop.routesToStop);
+                            } else {
+                                commonRoutesPrevious = [];
+                            }
+                            console.log('commonRoutesPrevious:');
+                            console.log(commonRoutesPrevious);
+                            if (commonRoutesPrevious.length > 0) {
+                                console.log('if (commonRoutesPrevious.length > 0) is true!');
+                                stopBeingChecked.routesToStop = commonRoutesPrevious;
+                                console.log('stopBeingChecked.routesToStop:');
+                                console.log(stopBeingChecked.routesToStop);
+                                stopBeingChecked.previousStop.routesToStop = commonRoutesPrevious;
+                                console.log('stopBeingChecked.previousStop.routesToStop:');
+                                console.log(stopBeingChecked.previousStop.routesToStop);
+                                stopBeingChecked = stopBeingChecked.previousStop;
+                                console.log('stopBeingChecked:');
+                                console.log(stopBeingChecked.id);
+                            } else {
+                                console.log('if (commonRoutesPrevious.length > 0) is false!');
+                                console.log('Breaking while loop!');
+                                break;
+                            }
+                            console.log('Start of while (stopBeingChecked.previousStop) loop pass');
+                        }
                     } else {
+                        console.log('if (commonRoutes.length > 0) is false!');
                         adjStop.routesToStop = currentStop.adjacentStops.get(adjStop.id).routes;
+                        console.log('adjStop.routesToStop:');
+                        console.log(adjStop.routesToStop);
                     }
+                }
+                console.log('First for loop end of pass');
+            }
+
+            // Puts unexplored stops with a non-infinity shortest time in their own array.
+
+            let unexploredNonInfinity = [];
+
+            for (let i = 0; i < unexploredStops.length; i++) {
+                if (unexploredStops[i].shortestTime !== Infinity) {
+                    unexploredNonInfinity.push(unexploredStops[i]);
+                }
+            }
+
+            /*
+            
+            Creates an array with the shortest times of all unexplored stops (except infinity time ones),
+            then finds the smallest number.
+
+            */
+
+            let unexploredShortestTimes = [];
+
+            for (let i = 0; i < unexploredNonInfinity.length; i++) {
+                unexploredShortestTimes.push(unexploredNonInfinity[i].shortestTime)
+            }
+
+            let unexploredShortestTimeMin = Math.min(...unexploredShortestTimes);
+
+            /*
+            
+            Checks all unexplored stops (except infinity time ones). Once it finds a stop matching the shortest
+            time found by the code above, it sets that to the current stop.
+
+            */
+
+            for (let i = 0; i < unexploredNonInfinity.length; i++) {
+                if (unexploredNonInfinity[i].shortestTime === unexploredShortestTimeMin) {
+                    currentStop = unexploredNonInfinity[i];
+                    break;
+                }
+            }
+
+            // Sets the current stop as explored and edits the corresponding arrays accordingly.
+
+            currentStop.explored = true;
+            exploredStops.push(currentStop);
+
+            function removeFromUnexploredStops(stop) {
+                let newArray = unexploredStops.filter((value) => value !== stop);
+                return newArray;
+            }
+
+            unexploredStops = removeFromUnexploredStops(currentStop);
+
+            /*
+            
+            If the new current stop is the destination set by the user, great! We just found the shortest time to the
+            destination and logged the "previous stop" and "routes to stop" for every stop along the way.
+
+            Otherwise, the loop continues again with the new current stop.
+            
+            */
+
+            if (currentStop === end) {
+                console.log('While loop break!');
+                console.log(currentStop.id);
+                console.log(end.id);
+                break;
+            }
+            
+            console.log('currentStop:');
+            console.log(currentStop.id);
+            console.log('while loop end of pass');
+        }
+
+        /*
+        
+        Works backwards with the "previousStop" values of each stop starting at the end until it reaches the start, putting
+        together a "path" array of all stops on the fastest route from the origin to the destination.
+
+        */
+
+        let path = [currentStop];
+
+        while (path[0].previousStop) {
+            path.unshift(path[0].previousStop);
+        }
+
+        console.log('path:');
+        console.log(path);
+
+        // next step
+
+        class pathSegment {
+            constructor(firstStop, lastStop, routes, numOfStops) {
+                this.firstStop = firstStop;
+                this.lastStop = lastStop;
+                this.routes = routes;
+                this.numOfStops = numOfStops;
+            }
+        }
+
+        let preFinalPath = [];
+
+        for (let i = 0; i < path.length; i++) {
+            if (!(path[i + 1])) {
+                break;
+            }
+            preFinalPath[i] = new pathSegment(path[i].id, path[i + 1].id, path[i + 1].routesToStop, 1)
+        }
+
+        // Creates a finalPath array, with pathSegments with the same routes condensed into a single object.
+
+        finalPath = preFinalPath;
+
+        // Iterates through every pathSegment.
+        for (let i = 0; i < finalPath.length;) {
+            // Breaks the loop when at the end of the path.
+            if (!(finalPath[i + 1])) {
+                break;
+            }
+            // If the current pathSegment has the same routes as the next pathSegment, combines them together.
+            if (deepEqual(finalPath[i].routes, finalPath[i + 1].routes)) {
+                finalPath[i].lastStop = finalPath[i + 1].lastStop;
+                finalPath[i].numOfStops += 1;
+                finalPath = removeFromArray(finalPath, finalPath[i + 1])
+            } else {
+                i += 1;
+                // i only increases if the if statement is false, so the loop will always double check its work.
+            }
+        }
+
+        console.log('finalPath:');
+        console.log(finalPath);
+
+    }
+}
+
+document.getElementById("submit-button").addEventListener('click', function() {
+    start = stopsMap.get(document.getElementById("origin-select").value);
+    end = stopsMap.get(document.getElementById("destination-select").value);
+    pathfinding();
+})

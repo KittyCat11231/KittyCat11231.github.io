@@ -1,0 +1,3 @@
+it's editing current stop's routes to stop even tho we haven't confirmed it has the right adjacent stop yet
+
+need to fix that
