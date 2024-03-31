@@ -1,5 +1,3 @@
-// Dev version
-
 import { finalPath } from "./pathfinding3.js";
 
 const stopsMap = new Map();
@@ -755,10 +753,10 @@ function outputToUI() {
             startTransferEnd = 'transfer';
         }
 
-        stopBox(finalPath[i].firstStop, startTransferEnd, `stop-box-${i}`)
+        stopBox(stopsMap.get(finalPath[i].firstStop), startTransferEnd, `stop-box-${i}`)
         
         if (!(finalPath[i + 1])) {
-            stopBox(finalPath[i].lastStop, 'end', `stop-box-${i + 1}`);
+            stopBox(stopsMap.get(finalPath[i].lastStop), 'end', `stop-box-${i + 1}`);
             break;
         }
         
@@ -772,8 +770,8 @@ function outputToUI() {
             routes.push(routesMap.get(finalPath[j].routes[i]));
         }
 
-        let stop1 = finalPath[j].firstStop;
-        let stop2 = finalPath[j].lastStop;
+        let stop1 = stopsMap.get(finalPath[j].firstStop);
+        let stop2 = stopsMap.get(finalPath[j].lastStop);
         
         let docId = `route-box-${j}`
 
