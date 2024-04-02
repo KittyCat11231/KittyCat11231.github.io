@@ -17,7 +17,6 @@ class Stop {
     previousStop;
     routesToStop = false;
 
-    // The value in the parenthesis in the constructor is what gets passed into a new Class.
     constructor(id) {
         this.id = id;
     }
