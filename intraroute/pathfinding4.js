@@ -30,6 +30,15 @@ class Connection {
     }
 }
 
+class pathSegment {
+    constructor(firstStop, lastStop, routes, numOfStops) {
+        this.firstStop = firstStop;
+        this.lastStop = lastStop;
+        this.routes = routes;
+        this.numOfStops = numOfStops;
+    }
+}
+
 // stopsMap pairs the string of a stop with its corresponding variable.
 const stopsMap = new Map();
 
@@ -108,8 +117,6 @@ let end;
 let unselected;
 stopsMap.set('unselected', unselected);
 
-// When the user clicks the submit button, pathfinding() runs.
-
 let finalPath;
 
 function findCommonElements(arr1, arr2) {
@@ -125,14 +132,30 @@ function deepEqual(a, b) {
     return JSON.stringify(a) === JSON.stringify(b);
 }
 
-class pathSegment {
-    constructor(firstStop, lastStop, routes, numOfStops) {
-        this.firstStop = firstStop;
-        this.lastStop = lastStop;
-        this.routes = routes;
-        this.numOfStops = numOfStops;
+function filterRoutes(pathArray) {
+    console.log('----- FILTER ROUTES FUNCTION -----')
+    console.log('pathArray:');
+    console.log(pathArray);
+
+    let commonRoutesForFilter = findCommonElements(pathArray[(pathArray.length - 1)].routes, pathArray[(pathArray.length - 2)].routes)
+
+    if (!(commonRoutesForFilter)) {
+        return;
     }
+
+    for (let i = (pathArray.length - 1); i >= 0; i--) {
+        let commonRoutes3 = findCommonElements(commonRoutesForFilter, pathArray[i].routes);
+
+        if (commonRoutes3.length > 0) {
+            pathArray[i].routes = commonRoutesForFilter
+        } else {
+            break;
+        }
+    }
+    console.log('----- END OF FILTER ROUTES FUNCTION -----')
 }
+
+// When the user clicks the submit button, pathfinding() runs.
 
 function pathfinding() {
 
@@ -175,10 +198,11 @@ function pathfinding() {
 
         for (let [key, value] of currentStop.adjacentStops) {
             let adjStop = stopsMap.get(key);
-            let adjStopNewTime = currentStop.shortestTime + value.weight;
-
-            console.log('evaluating adjacent stop:');
+            console.log('adjStop:');
             console.log(adjStop.id);
+            let adjStopNewTime = currentStop.shortestTime + value.weight;
+            console.log('adjStopNewTime:');
+            console.log(adjStopNewTime);
 
             let routesLastLeg = currentStop.adjacentStops.get(adjStop.id).routes;
             console.log('routesLastLeg:');
@@ -186,36 +210,26 @@ function pathfinding() {
             let pathLastLeg = new pathSegment(currentStop, adjStop, routesLastLeg, 1);
             console.log('pathLastLeg:');
             console.log(pathLastLeg);
+            console.log('pathLastLeg.routes:');
+            console.log(pathLastLeg.routes);
             let adjStopPath = [pathLastLeg];
-
-            console.log('adjStopPath:');
-            console.log(adjStopPath);
 
             let transferNeeded;
 
             function buildPathToStop() {
 
                 for (let i = (currentStop.pathToStop.length - 1); i >= 0; i--) {
-                    console.log(`currentStop.pathToStop[${i}]:`);
-                    console.log(currentStop.pathToStop[i]);
                     adjStopPath.unshift(currentStop.pathToStop[i])
-                    console.log('adjStopPath after unshift:');
-                    console.log(adjStopPath);
                 }
 
-                console.log('adjStopPath[adjStopPath.length - 1]:');
-                console.log(adjStopPath[adjStopPath.length - 1]);
-                console.log('adjStopPath[adjStopPath.length - 2]:');
-                console.log(adjStopPath[adjStopPath.length - 2]);
-
                 let commonRoutes = findCommonElements(adjStopPath[adjStopPath.length - 1].routes, adjStopPath[adjStopPath.length - 2].routes);
-
                 console.log('commonRoutes:');
-                console.log(commonRoutes)
+                console.log(commonRoutes);
 
                 if (commonRoutes.length > 0) {
-                    adjStopPath[adjStopPath.length - 1].routes = commonRoutes;
-                    adjStopPath[adjStopPath.length - 2].routes = commonRoutes;
+                    filterRoutes(adjStopPath);
+                    console.log(adjStopPath);
+                    console.log(adjStop.pathToStop);
                     transferNeeded = false;
                 } else {
                     transferNeeded = true;
@@ -224,8 +238,10 @@ function pathfinding() {
             }
 
             if (currentStop.pathToStop !== false) {
+                console.log('currentStop.pathToStop exists, running buildPathToStop')
                 buildPathToStop();
             } else {
+                console.log('currentStop.pathToStop does not exist')
                 transferNeeded = false;
             }
 
@@ -233,37 +249,11 @@ function pathfinding() {
                 adjStopNewTime += 10;
             }
 
-            function filterPathToStop() {
-                let changesMade = false;
-
-                while (true) {
-
-                    for (let i = 0; i < (adjStop.pathToStop.length - 1); i++) {
-                        if (!(deepEqual(adjStop.pathToStop[i].routes, adjStop.pathToStop[i + 1].routes))) {
-                            changesMade = true;
-                            console.log(`adjStop.pathToStop[${i}].routes`);
-                            console.log(adjStop.pathToStop[i].routes);
-                            console.log(`adjStop.pathToStop[${i + 1}].routes`);
-                            console.log(adjStop.pathToStop[i + 1].routes);
-                            adjStop.pathToStop[i].routes = findCommonElements(adjStop.pathToStop[i].routes, adjStop.pathToStop[i + 1].routes);
-                            adjStop.pathToStop[i + 1].routes = findCommonElements(adjStop.pathToStop[i].routes, adjStop.pathToStop[i + 1].routes);
-                        } else {
-                            changesMade = false;
-                        }
-                    }
-
-                    if (changesMade === false) {
-                        break;
-                    }
-
-                }
-            }
-
             if (adjStopNewTime < adjStop.shortestTime) {
                 adjStop.shortestTime = adjStopNewTime;
                 adjStop.previousStop = currentStop;
                 adjStop.pathToStop = adjStopPath;
-                filterPathToStop();
+                // filterRoutes(adjStop.pathToStop);
             }
         }
 
@@ -333,6 +323,8 @@ function pathfinding() {
 
     finalPath = end.pathToStop;
 
+    /*
+
     // Iterates through every pathSegment.
     for (let i = 0; i < (finalPath.length - 1);) {
         // If the current pathSegment has the same routes as the next pathSegment, combines them together.
@@ -345,6 +337,8 @@ function pathfinding() {
             // i only increases if the if statement is false, so the loop will always double check its work.
         }
     }
+
+    */
 
     for (let i = 0; i < finalPath.length; i++) {
         finalPath[i].firstStop = finalPath[i].firstStop.id;
@@ -359,6 +353,23 @@ document.getElementById("submit-button").addEventListener('click', function() {
     end = stopsMap.get(document.getElementById("destination-select").value);
     pathfinding();
     console.log(finalPath);
+    console.log('---- PATH FOR ALL STOPS ----');
+    console.log('bahnKNX');
+    console.log(bahnKNX.pathToStop);
+    console.log('bahnSHC');
+    console.log(bahnKNX.pathToStop);
+    console.log('bahnSHD');
+    console.log(bahnKNX.pathToStop);
+    console.log('bahnWHO');
+    console.log(bahnKNX.pathToStop);
+    console.log('bahnWHQ');
+    console.log(bahnKNX.pathToStop);
+    console.log('bahnZQA');
+    console.log(bahnKNX.pathToStop);
+    console.log('bahnZQL');
+    console.log(bahnKNX.pathToStop);
+    console.log('bahnZQT');
+    console.log(bahnKNX.pathToStop);
 })
 
 export { finalPath };
