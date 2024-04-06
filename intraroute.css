@@ -193,11 +193,11 @@ select {
     color: #4d4d4d;
 }
 
-#back-button-box {
+#back-button-box, #back-button-box-2 {
     margin-top: 50px;
 }
 
-#back-button {
+#back-button, #back-button-2 {
     background-color: white;
     color: #4d4d4d;
     border: 3px solid #4d4d4d;
@@ -210,7 +210,7 @@ select {
     margin-bottom: 45px;
 }
 
-#back-button:hover {
+#back-button:hover, #back-button-2:hover {
     background-color: #4d4d4d;
     color: white;
 }

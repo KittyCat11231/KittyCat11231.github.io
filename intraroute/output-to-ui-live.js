@@ -10,7 +10,7 @@ Developed by kyle11231 with help from DNAmaster10 & scarycrumb.
 
 */
 
-import { finalPath } from "./pathfinding4.js";
+import { finalPath } from "./pathfinding-live.js";
 
 const stopsMap = new Map();
 const routesMap = new Map();
@@ -754,6 +754,7 @@ function outputToUI() {
 
     document.getElementById('gray-box-before').classList.add('display-none')
     document.getElementById('back-button-box').classList.remove('display-none')
+    document.getElementById('back-button-box-2').classList.remove('display-none')
   
     for (let i = 0; i < 100000; i++) {
         
