@@ -102,7 +102,7 @@ const bahnZQA = {
     mode: 'bahn',
     city: 'Zaquar',
     stopName: 'Air & Sea Ports',
-    code: 'WHQ',
+    code: 'ZQA',
     routeMetadata: new Map()
 }
 

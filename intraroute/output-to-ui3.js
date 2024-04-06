@@ -1,4 +1,4 @@
-import { finalPath } from "./pathfinding3.js";
+import { finalPath } from "./pathfinding4.js";
 
 const stopsMap = new Map();
 const routesMap = new Map();
@@ -100,7 +100,7 @@ const bahnZQA = {
     mode: 'bahn',
     city: 'Zaquar',
     stopName: 'Air & Sea Ports',
-    code: 'WHQ',
+    code: 'ZQA',
     routeMetadata: new Map()
 }
 
