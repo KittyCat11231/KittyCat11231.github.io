@@ -1,0 +1,157 @@
+Zaquar,Ménage et Trois Regional Airport,busZAQ,busSGC,1,bus101north
+Zaquar,Ménage et Trois Regional Airport,busZAQ,airZAQ,30,walk
+Zaquar,Ménage et Trois Regional Airport,busZAQ,railZAQ,30,walk
+Zaquar,Ménage et Trois Regional Airport,busZAQ,sailZQW,30,walk
+Zaquar,Ménage et Trois Regional Airport,busZAQ,bahnZQA,30,walk
+,,,,,
+Segville,Grand Central,busSGC,busZAQ,1,bus101south
+,,,,,
+Sealane,Central,busSEA,busCWI,1,bus102west
+,,,,,
+Formosa-Sealane-Danielston,UCWT International Airport,busCWI,busSEA,1,bus102east
+Formosa-Sealane-Danielston,UCWT International Airport,busCWI,busFMN,1,bus103west
+Formosa-Sealane-Danielston,UCWT International Airport,busCWI,airCWI,30,walk
+Formosa-Sealane-Danielston,UCWT International Airport,busCWI,railCWE,30,walk
+Formosa-Sealane-Danielston,UCWT International Airport,busCWI,railCWW,30,walk
+,,,,,
+Formosa,Northern,busFMN,busCWI,1,bus103east
+,,,,,
+Whiteley,College Park,busWCP,busWSU,1,bus105south
+,,,,,
+Whiteley,Southwold University,busWSU,busWCP,1,bus105north
+Whiteley,Southwold University,busWSU,busWAP,1,bus105south
+,,,,,
+Whiteley,Airport Parkway,busWAP,busWSU,1,bus105north
+Whiteley,Airport Parkway,busWAP,busWHO,1,bus105south
+,,,,,
+Whiteley,Olympia-Cacturne Boulevards,busWHO,busWAP,1,bus105north
+Whiteley,Olympia-Cacturne Boulevards,busWHO,railWHO,30,walk
+Whiteley,Olympia-Cacturne Boulevards,busWHO,bahnWHO,30,walk
+,,,,,
+Konawa,,busKON,busHZN,1,bus107south
+,,,,,
+Lanark-Konawa,Horizon National Airport,busHZN,busKON,1,bus107north
+Lanark-Konawa,Horizon National Airport,busHZN,airHZN,30,walk
+Lanark-Konawa,Horizon National Airport,busHZN,railHZN,30,walk
+,,,,,
+Amestris,Cummins Highway,busAMC,busAMW,1,bus108west
+,,,,,
+Amestris,Washington Street,busAMW,busAMC,1,bus108east
+,,,,,
+Espil,Sanders Station,busESP,busESN,1,bus109south
+,,,,,
+Espil,North,busESN,busESP,1,bus109north
+Espil,North,busESN,busESD,1,bus109south
+,,,,,
+Espil,Downtown,busESD,busESN,1,bus109north
+Espil,Downtown,busESD,busEEA,1,bus109south
+,,,,,
+Espil,Ecilidae Airport,busEEA,busESD,1,bus109north
+Espil,Ecilidae Airport,busEEA,airEEA,30,walk
+,,,,,
+Utopia,Anthony Fokker Regional Airport & Transit Hub,busAFK,busIKE,1,bus110east
+Utopia,Anthony Fokker Regional Airport & Transit Hub,busAFK,airAFK,30,walk
+Utopia,Anthony Fokker Regional Airport & Transit Hub,busAFK,railAFK,30,walk
+,,,,,
+Utopia,IKEA,busIKE,busAFK,1,bus110west
+Utopia,IKEA,busIKE,airJDL,30,walk
+,,,,,
+Waterville,Union Station,busWTU,busOAW,1,bus111north
+,,,,,
+Waterville,Orio & Waterville RaiLinQ Station,busOAW,busWTU,1,bus111south
+,,,,,
+Dabecco,IntraRail Station,busDAB,busDBC,1,bus112west
+,,,,,
+Dabecco,Regional Airport,busDBC,busDAB,1,bus112east
+Dabecco,Regional Airport,busDBC,airDBC,30,walk
+,,,,,
+Nippia-Liten,Metropolitan Airport,busNIL,busNIP,1,bus113west
+Nippia-Liten,Metropolitan Airport,busNIL,busLIT,1,bus114west
+Nippia-Liten,Metropolitan Airport,busNIL,airNIL,30,walk
+,,,,,
+Nippia,IntraRail Station,busNIP,busNIL,1,bus113east
+,,,,,
+Liten,RaiLinQ Station,busLIT,busNIL,1,bus114east
+,,,,,
+Washingcube,Airfield,busWCA,busWCE,1,bus115south
+Washingcube,Airfield,busWCA,airWCA,30,walk
+,,,,,
+Washingcube,East FrostyRail Station,busWCE,busWCA,1,bus115north
+,,,,,
+Siletz,Salvador Station Bus Terminal,busSLZ,busPAL,1,bus116south
+Siletz,Salvador Station Bus Terminal,busSLZ,airSUA,30,walk
+Siletz,Salvador Station Bus Terminal,busSLZ,railSLZ,30,walk
+,,,,,
+Palestropol,Bus Terminal,busPAL,busSLZ,1,bus116north
+,,,,,
+Scarborough,Bus Terminal,busSBT,busNKT,1,bus117
+,,,,,
+Scarborough,New Kent Terminal,busNKT,busSCR,1,bus117
+,,,,,
+Scarborough,"IntraRail, BluRail, & NSC Stations",busSCR,busSVC,1,bus117
+,,,,,
+Scarborough,ValleyConnect Station,busSVC,busSBT,1,bus117
+,,,,,
+Whitechapel,Border,busWHB,busWHW,1,bus118south
+Whitechapel,Border,busWHB,busCAL,1,bus119north
+,,,,,
+Whitechapel,Waterfront,busWHW,busWHB,1,bus118north
+Whitechapel,Waterfront,busWHW,busWHT,1,bus118south
+,,,,,
+Whitechapel,Sky Harbor,busWHT,busWHW,1,bus118north
+Whitechapel,Sky Harbor,busWHT,airWHT,30,walk
+,,,,,
+West Calbar,Regional Airport,busCAL,busWHB,1,bus119south
+West Calbar,Regional Airport,busCAL,airCAL,30,walk
+,,,,,
+Snowtopic,IntraRail & RaiLinQ Stations,busSNW,busSTC,1,bus120north
+,,,,,
+Snowtopic,Transit Centre,busSTC,busSNW,1,bus120south
+,,,,,
+Ravenna,Mountainside International Airport,busRAV,busRSP,1,bus121south
+Ravenna,Mountainside International Airport,busRAV,airRAV,30,walk
+Ravenna,Mountainside International Airport,busRAV,railRAV,30,walk
+,,,,,
+Ravenna,Sports Park,busRSP,busRAV,1,bus121north
+Ravenna,Sports Park,busRSP,busRVU,1,bus121south
+,,,,,
+Ravenna,Union Station,busRVU,busRSP,1,bus121north
+,,,,,
+Boston,Stratford International,busBSI,busBSH,1,bus122north
+,,,,,
+Boston,Harbor,busBSH,busBSI,1,bus122south
+,,,,,
+Newbourne,IntraSail Docks,busNWB,busNFS,1,bus123west
+,,,,,
+Newbourne,Flinders Street NewRail FLR Station,busNFS,busNWB,1,bus123east
+,,,,,
+Rizalburg,Strand Airfield,busRSA,busRZW,1,bus124west
+Rizalburg,Strand Airfield,busRSA,airRSA,30,walk
+,,,,,
+Rizalburg,Water Port,busRZW,busRSA,1,bus124east
+,,,,,
+Los Angeles-Farwater,Union Station,busLAF,busLOS,1,bus125south
+Los Angeles-Farwater,Union Station,busLAF,airFLC,30,walk
+Los Angeles-Farwater,Union Station,busLAF,railLAF,30,walk
+,,,,,
+Los Angeles,Venice Avenue,busLOS,busLAF,1,bus125north
+,,,,,
+San Vantino,IntraRail Station,busSVT,busVTM,1,bus126east
+,,,,,
+San Vantino,Marina,busVTM,busSVT,1,bus126west
+,,,,,
+Alexandriasburg,MCR Station,busALX,busAXB,1,bus127south
+,,,,,
+Alexandriasburg,Airfield,busAXB,busALX,1,bus127north
+Alexandriasburg,Airfield,busAXB,airAXB,30,walk
+,,,,,
+Whitecliff,Central,busWCF,busNEW,1,bus128west
+,,,,,
+Newington,Bus Station,busNEW,busWCF,1,bus128east
+,,,,,
+Central City,United Cities Bus Terminal,busCCU,busBLV,1,bus401north
+Central City,United Cities Bus Terminal,busCCU,busBEN,1,bus402north
+,,,,,
+Belvadere,IntraRail Station,busBLV,busCCU,1,bus401south
+,,,,,
+Benion,Bus Exchange,busBEN,busCCU,1,bus402south
