@@ -80,17 +80,6 @@ if (useSail === true) {
     addToAllStops(sailStops);
 }
 
-let stopsMap = new Map();
-
-/* work in progress
-
-for (let i = 0; i < allStops.length; i++) {
-    stopsMap.set(allStops[i].id, s)
-}
-
-*/
-
 console.log(allStops);
 
 export { allStops };
-export { stopsMap };

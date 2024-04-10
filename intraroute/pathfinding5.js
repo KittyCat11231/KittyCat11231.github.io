@@ -11,7 +11,15 @@ Developed by kyle11231 with help from DNAmaster10 & scarycrumb.
 */
 
 import { allStops } from './data/pathfinding/parseJSON.js'
-import { stopsMap } from './data/pathfinding/parseJSON.js'
+
+let stopsMap = new Map();
+
+/*
+for (let i = 0; i < allStops.length; i++) {
+    window[allStops[i].id] = allStops[i];
+    stopsMap.set(allStops[i].id, allStops[i]);
+}
+*/
 
 // Origin and destination to be decided by the user.
 
@@ -34,17 +42,6 @@ function removeFromArray(array, removeMe) {
 
 function deepEqual(a, b) {
     return JSON.stringify(a) === JSON.stringify(b);
-}
-
-function changeStopsToIds(pathArray) {
-    for (let i = 0; i < pathArray.length; i++) {
-        if (pathArray[i].firstStop.id) {
-            pathArray[i].firstStop = pathArray[i].firstStop.id;
-        }
-        if (pathArray[i].lastStop.id) {
-            pathArray[i].lastStop = pathArray[i].lastStop.id;
-        }
-    }
 }
 
 function filterRoutes(pathArray) {
