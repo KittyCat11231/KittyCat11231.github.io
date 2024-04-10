@@ -19,6 +19,15 @@ for (let i = 0; i < allStops.length; i++) {
     stopsMap.set(allStops[i].id, allStops[i]);
 }
 
+class pathSegment {
+    constructor(firstStop, lastStop, routes, numOfStops) {
+        this.firstStop = firstStop;
+        this.lastStop = lastStop;
+        this.routes = routes;
+        this.numOfStops = numOfStops;
+    }
+}
+
 // Origin and destination to be decided by the user.
 
 let start;
@@ -104,7 +113,6 @@ function pathfinding() {
         for (let [key, value] of currentStop.adjacentStops) {
             let adjStop = stopsMap.get(key);
             let adjStopNewTime = currentStop.shortestTime + value.weight;
-
             let routesLastLeg = currentStop.adjacentStops.get(adjStop.id).routes;
             let pathLastLeg = new pathSegment(currentStop.id, adjStop.id, routesLastLeg, 1);
             let adjStopPath = [pathLastLeg];
@@ -181,9 +189,12 @@ function pathfinding() {
         */
 
         for (let i = 0; i < unexploredNonInfinity.length; i++) {
+            console.log(unexploredNonInfinity[i].shortestTime == unexploredShortestTimeMin);
+            console.log(unexploredNonInfinity[i].shortestTime === unexploredShortestTimeMin);
             if (unexploredNonInfinity[i].shortestTime === unexploredShortestTimeMin) {
                 currentStop = unexploredNonInfinity[i];
                 break;
+            } else {
             }
         }
 

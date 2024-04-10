@@ -42,12 +42,12 @@ let useSail = false;
 
 function parseJSON(modeStops, modeData) {
     modeStops.push(new Stop(modeData[0].id));
-    modeStops[0].adjacentStops.set(modeData[0].adjStop, new Connection(modeData[0].weight, modeData[0].routes));
+    modeStops[0].adjacentStops.set(modeData[0].adjStop, new Connection(Number(modeData[0].weight), modeData[0].routes));
     for (let i = 1; i < modeData.length; i++) {
         if (!(modeData[i].id === modeData[i - 1].id)) {
             modeStops.push(new Stop(modeData[i].id));
         }
-        modeStops[modeStops.length - 1].adjacentStops.set(modeData[i].adjStop, new Connection(modeData[i].weight, modeData[i].routes));
+        modeStops[modeStops.length - 1].adjacentStops.set(modeData[i].adjStop, new Connection(Number(modeData[i].weight), modeData[i].routes));
     }
 }
 
