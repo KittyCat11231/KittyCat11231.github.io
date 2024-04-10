@@ -14,12 +14,10 @@ import { allStops } from './data/pathfinding/parseJSON.js'
 
 let stopsMap = new Map();
 
-/*
 for (let i = 0; i < allStops.length; i++) {
     window[allStops[i].id] = allStops[i];
     stopsMap.set(allStops[i].id, allStops[i]);
 }
-*/
 
 // Origin and destination to be decided by the user.
 
