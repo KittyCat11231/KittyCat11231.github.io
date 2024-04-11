@@ -47,7 +47,21 @@ function parseJSON(modeStops, modeData) {
         if (!(modeData[i].id === modeData[i - 1].id)) {
             modeStops.push(new Stop(modeData[i].id));
         }
-        modeStops[modeStops.length - 1].adjacentStops.set(modeData[i].adjStop, new Connection(Number(modeData[i].weight), modeData[i].routes));
+        if (useAir === true && modeData[i].adjStop.includes('air')) {
+            modeStops[modeStops.length - 1].adjacentStops.set(modeData[i].adjStop, new Connection(Number(modeData[i].weight), modeData[i].routes));
+        }
+        if (useBahn === true && modeData[i].adjStop.includes('bahn')) {
+            modeStops[modeStops.length - 1].adjacentStops.set(modeData[i].adjStop, new Connection(Number(modeData[i].weight), modeData[i].routes));
+        }
+        if (useBus === true && (modeData[i].adjStop.includes('bus') || modeData[i].adjStop.includes('omega'))) {
+            modeStops[modeStops.length - 1].adjacentStops.set(modeData[i].adjStop, new Connection(Number(modeData[i].weight), modeData[i].routes));
+        }
+        if (useRail === true && modeData[i].adjStop.includes('rail')) {
+            modeStops[modeStops.length - 1].adjacentStops.set(modeData[i].adjStop, new Connection(Number(modeData[i].weight), modeData[i].routes));
+        }
+        if (useSail === true && modeData[i].adjStop.includes('sail')) {
+            modeStops[modeStops.length - 1].adjacentStops.set(modeData[i].adjStop, new Connection(Number(modeData[i].weight), modeData[i].routes));
+        }
     }
 }
 
