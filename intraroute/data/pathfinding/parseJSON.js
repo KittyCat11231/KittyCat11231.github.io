@@ -61,7 +61,7 @@ function parseJSON(modeStops, modeData) {
         if (useBus === true && (modeData[i].adjStop.includes('bus') || modeData[i].adjStop.includes('omega'))) {
             modeStops[modeStops.length - 1].adjacentStops.set(modeData[i].adjStop, new Connection(Number(modeData[i].weight), modeData[i].routes));
         }
-        if (useRail === true && modeData[i].adjStop.includes('rail')) {
+        if (useRail === true && (modeData[i].adjStop.includes('rail') && !(modeData[i].adjStop.includes('railScar')) && !(modeData[i].adjStop.includes('railLumeva')))) {
             modeStops[modeStops.length - 1].adjacentStops.set(modeData[i].adjStop, new Connection(Number(modeData[i].weight), modeData[i].routes));
         }
         if (useRailLocal === true && (modeData[i].adjStop.includes('railScar') || modeData[i].adjStop.includes('railLumeva'))) {
