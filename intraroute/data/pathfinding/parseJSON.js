@@ -3,6 +3,8 @@ import bahnData from './bahn.json' with { type: 'json' };
 import busData from './bus.json' with { type: 'json' };
 import omegaData from './omega.json' with { type: 'json' };
 import railData from './rail.json' with { type: 'json' };
+import railScarData from './railScar.json' with { type: 'json' };
+import railLumevaData from './railLumeva.json' with { type: 'json' };
 import sailData from './sail.json' with { type: 'json' };
 
 class Stop {
@@ -32,12 +34,15 @@ let bahnStops = [];
 let busStops = [];
 let omegaStops = [];
 let railStops = [];
+let railScarStops = [];
+let railLumevaStops = [];
 let sailStops = [];
 
 let useAir = false;
 let useBahn = true;
 let useBus = false;
 let useRail = false;
+let useRailLocal = false;
 let useSail = false;
 
 function parseJSON(modeStops, modeData) {
@@ -57,6 +62,9 @@ function parseJSON(modeStops, modeData) {
             modeStops[modeStops.length - 1].adjacentStops.set(modeData[i].adjStop, new Connection(Number(modeData[i].weight), modeData[i].routes));
         }
         if (useRail === true && modeData[i].adjStop.includes('rail')) {
+            modeStops[modeStops.length - 1].adjacentStops.set(modeData[i].adjStop, new Connection(Number(modeData[i].weight), modeData[i].routes));
+        }
+        if (useRailLocal === true && (modeData[i].adjStop.includes('railScar') || modeData[i].adjStop.includes('railLumeva'))) {
             modeStops[modeStops.length - 1].adjacentStops.set(modeData[i].adjStop, new Connection(Number(modeData[i].weight), modeData[i].routes));
         }
         if (useSail === true && modeData[i].adjStop.includes('sail')) {
@@ -81,13 +89,19 @@ if (useBahn === true) {
 }
 if (useBus === true) {
     parseJSON(busStops, busData);
-    parseJSON(omegaStops, omegaData);
     addToAllStops(busStops);
+    parseJSON(omegaStops, omegaData);
     addToAllStops(omegaStops);
 }
 if (useRail === true) {
     parseJSON(railStops, railData);
     addToAllStops(railStops);
+}
+if (useRailLocal === true) {
+    parseJSON(railScarStops, railScarData);
+    addToAllStops(railScarStops);
+    parseJSON(railLumevaStops, railLumevaData);
+    addToAllStops(railLumevaStops);
 }
 if (useSail === true) {
     parseJSON(sailStops, sailData);

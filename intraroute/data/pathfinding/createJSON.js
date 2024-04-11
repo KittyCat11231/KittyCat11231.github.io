@@ -14,10 +14,6 @@ function parseFiles(mode) {
         }
     }
     
-    function deepEqual(a, b) {
-        return JSON.stringify(a) === JSON.stringify(b);
-    }
-    
     let preAllStops = [];
     
     function createJSON(data) {
@@ -55,4 +51,6 @@ parseFiles('bahn');
 parseFiles('bus');
 parseFiles('omega');
 parseFiles('rail');
+parseFiles('railLumeva');
+parseFiles('railScar');
 parseFiles('sail');
