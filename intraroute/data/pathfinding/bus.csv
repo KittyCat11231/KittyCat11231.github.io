@@ -98,9 +98,9 @@ Scarborough,Bus Terminal,busSBT,railScarMCR,30,walk
 Scarborough,New Kent Terminal,busNKT,busSCR,1,bus117
 Scarborough,New Kent Terminal,busNKT,railNKT,30,walk
 ,,,,,
-Scarborough,"IntraRail, BluRail, & NSC Stations",busSCR,busSVC,1,bus117
-Scarborough,"IntraRail, BluRail, & NSC Stations",busSCR,railSCR,30,walk
-Scarborough,"IntraRail, BluRail, & NSC Stations",busSCR,railScarSTD,30,walk
+Scarborough,IntraRail BluRail & NSC Stations,busSCR,busSVC,1,bus117
+Scarborough,IntraRail BluRail & NSC Stations,busSCR,railSCR,30,walk
+Scarborough,IntraRail BluRail & NSC Stations,busSCR,railScarSTD,30,walk
 ,,,,,
 Scarborough,ValleyConnect Station,busSVC,busSBT,1,bus117
 Scarborough,ValleyConnect Station,busSVC,railScarCTY,30,walk
