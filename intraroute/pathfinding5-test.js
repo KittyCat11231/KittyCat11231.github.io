@@ -223,7 +223,7 @@ let currentStopAtStartOfLoop = currentStop;
         }
 
 if (currentStop.id === currentStopAtStartOfLoop.id) {
-console.log('ERROR: New current stop assignment failed.);
+console.log('ERROR: New current stop assignment failed.');
 console.log('currentStop:');
 console.log(currentStop);
 break;
