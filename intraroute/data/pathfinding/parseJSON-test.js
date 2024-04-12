@@ -38,7 +38,7 @@ let railScarStops = [];
 let railLumevaStops = [];
 let sailStops = [];
 
-let useAir = false;
+let useAir = true;
 let useBahn = true;
 let useBus = true;
 let useRail = true;

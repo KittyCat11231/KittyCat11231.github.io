@@ -108,7 +108,7 @@ function pathfinding() {
 
     while (unexploredStops.length > 0) {
 
-let currentStopAtStartOfLoop = currentStop;
+    let currentStopAtStartOfLoop = currentStop;
 
         console.log(currentStop.id);
 
@@ -139,8 +139,12 @@ let currentStopAtStartOfLoop = currentStop;
                 if (commonRoutes.length > 0) {
                     filterRoutes(adjStopPath);
                     transferNeeded = false;
+                    console.log('false because commonRoutes.length > 0:');
+                    console.log(adjStop.id);
                 } else {
                     transferNeeded = true;
+                    console.log('true because commonRoutes.length < 0:');
+                    console.log(adjStop.id);
                 }
 
             }
@@ -149,6 +153,8 @@ let currentStopAtStartOfLoop = currentStop;
                 buildPathToStop();
             } else {
                 transferNeeded = false;
+                console.log('false because currentStop.pathToStop !== false:');
+                console.log(adjStop.id);
             }
 
             if (transferNeeded === true) {
@@ -222,12 +228,14 @@ let currentStopAtStartOfLoop = currentStop;
             break;
         }
 
-if (currentStop.id === currentStopAtStartOfLoop.id) {
-console.log('ERROR: New current stop assignment failed.');
-console.log('currentStop:');
-console.log(currentStop);
-alert('Whoopsie! That wasn\'t supposed to happen!');
-break;
+        if (currentStop.id === currentStopAtStartOfLoop.id) {
+            console.log('ERROR: New current stop assignment failed.');
+            console.log('currentStop:');
+            console.log(currentStop);
+            debugger;
+            alert('Whoopsie! That wasn\'t supposed to happen!');
+            break;
+            }
     }
 
     // Creates a finalPath array, with pathSegments with the same routes condensed into a single object.
@@ -252,8 +260,8 @@ break;
 // Sets the user's origin and destination and runs pathfinding() after the user hits the submit button.
 
 document.getElementById("submit-button").addEventListener('click', function() {
-    start = railASN;
-    end = railSSR;
+    start = railLAN;
+    end = railHGT;
     pathfinding();
     console.log('start:');
     console.log(start.id);
