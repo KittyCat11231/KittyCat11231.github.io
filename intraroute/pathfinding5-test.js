@@ -113,7 +113,6 @@ function pathfinding() {
         for (let [key, value] of currentStop.adjacentStops) {
             let adjStop = stopsMap.get(key);
             let adjStopNewTime = currentStop.shortestTime + value.weight;
-            console.log(adjStop);
             if (!(adjStop)) {
                 debugger;
             }

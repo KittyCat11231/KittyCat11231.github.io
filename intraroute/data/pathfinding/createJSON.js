@@ -1,5 +1,10 @@
 const fs = require('fs');
 
+function removeFromArray(array, removeMe) {
+    let newArray = array.filter((value) => value !== removeMe);
+    return newArray;
+}
+
 function parseFiles(mode) {
     fs.readFile(`${mode}.csv`, 'utf8', function(err, data) {
         createJSON(data);
@@ -26,7 +31,7 @@ function parseFiles(mode) {
             let weight = row[4];
             let routes = [];
             for (let j = 5; j < 100000; j++) {
-                if (!(row[j]) || row[j] === '/r') {
+                if (!(row[j])) {
                     break;
                 }
                 routes.push(row[j]);
