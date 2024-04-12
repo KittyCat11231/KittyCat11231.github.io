@@ -108,6 +108,8 @@ function pathfinding() {
 
     while (unexploredStops.length > 0) {
 
+        console.log(currentStop.id);
+
         // Iterates through every adjacent stop.
 
         for (let [key, value] of currentStop.adjacentStops) {
@@ -241,8 +243,8 @@ function pathfinding() {
 // Sets the user's origin and destination and runs pathfinding() after the user hits the submit button.
 
 document.getElementById("submit-button").addEventListener('click', function() {
-    start = bahnKNX;
-    end = omegaNWP;
+    start = railASN;
+    end = railSSR;
     pathfinding();
     console.log('start:');
     console.log(start.id);
