@@ -108,6 +108,8 @@ function pathfinding() {
 
     while (unexploredStops.length > 0) {
 
+let currentStopAtStartOfLoop = currentStop;
+
         console.log(currentStop.id);
 
         // Iterates through every adjacent stop.
@@ -219,6 +221,12 @@ function pathfinding() {
         if (currentStop === end) {
             break;
         }
+
+if (currentStop.id == currentStopAtStartOfLoop.id) {
+console.log('ERROR: New current stop assignment failed.);
+console.log('currentStop:');
+console.log(currentStop);
+break;
     }
 
     // Creates a finalPath array, with pathSegments with the same routes condensed into a single object.
