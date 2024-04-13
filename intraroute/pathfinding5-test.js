@@ -257,6 +257,7 @@ function pathfinding() {
     }
 }
 
+
 // Sets the user's origin and destination and runs pathfinding() after the user hits the submit button.
 
 document.getElementById("submit-button").addEventListener('click', function() {
