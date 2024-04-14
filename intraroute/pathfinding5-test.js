@@ -261,8 +261,8 @@ function pathfinding() {
 // Sets the user's origin and destination and runs pathfinding() after the user hits the submit button.
 
 document.getElementById("submit-button").addEventListener('click', function() {
-    start = railLAN;
-    end = railHGT;
+    start = omegaCAC;
+    end = railBRS;
     pathfinding();
     console.log('start:');
     console.log(start.id);
