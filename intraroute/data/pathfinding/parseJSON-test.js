@@ -50,10 +50,6 @@ function removeFromArray(array, removeMe) {
     return newArray;
 }
 
-function deepEqual(a, b) {
-    return JSON.stringify(a) === JSON.stringify(b);
-}
-
 function removeAnnoyingStuff(modeData) {
     for (let i = 0; i < modeData.length; i++) {
         for (let j = 0; j < modeData[i].routes.length; j++) {

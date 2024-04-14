@@ -1,10 +1,5 @@
 const fs = require('fs');
 
-function removeFromArray(array, removeMe) {
-    let newArray = array.filter((value) => value !== removeMe);
-    return newArray;
-}
-
 function parseFiles(mode) {
     fs.readFile(`${mode}.csv`, 'utf8', function(err, data) {
         createJSON(data);
