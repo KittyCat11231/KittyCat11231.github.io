@@ -1,10 +1,6 @@
 const fs = require('fs');
 
 function parseFiles(mode) {
-    fs.readFile(`${mode}.csv`, 'utf8', function(err, data) {
-        createJSON(data);
-    });
-    
     class preStopUI {
         constructor(id, code, city, stopName, route, meta1, meta2) {
             this.id = id;
@@ -23,7 +19,7 @@ function parseFiles(mode) {
         const rows = data.split('\n');
 
         for (let i = 0; i < rows.length; i++) {
-            let row = row[i].split(',');
+            let row = rows[i].split(',');
             let id = row[2];
             let code = row[3];
             let city = row[0];
@@ -44,6 +40,10 @@ function parseFiles(mode) {
             }
         });
     }
+
+    fs.readFile(`${mode}.csv`, 'utf8', function(err, data) {
+        createJSON(data);
+    });
 }
 
 parseFiles('air');

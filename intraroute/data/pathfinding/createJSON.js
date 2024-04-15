@@ -1,10 +1,6 @@
 const fs = require('fs');
 
 function parseFiles(mode) {
-    fs.readFile(`${mode}.csv`, 'utf8', function(err, data) {
-        createJSON(data);
-    });
-    
     class preStop {
         constructor(id, adjStop, weight, routes) {
             this.id = id;
@@ -44,6 +40,10 @@ function parseFiles(mode) {
             }
         });
     }
+
+    fs.readFile(`${mode}.csv`, 'utf8', function(err, data) {
+        createJSON(data);
+    });
 }
 
 parseFiles('air');
