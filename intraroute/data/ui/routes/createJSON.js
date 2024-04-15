@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 function parseFiles(mode) {
-    class route {
+    class routeBahnRail {
         constructor(id, type, bullet, bulletWhite, bulletAltText, routeName, terminus, terminusCity, terminusStopName, useFullNameIn) {
             this.id = id;
             this.type = type;
@@ -13,6 +13,15 @@ function parseFiles(mode) {
             this.terminusCity = terminusCity;
             this.terminusStopName = terminusStopName;
             this.useFullNameIn = useFullNameIn;
+        }
+    }
+    
+    class routeAir {
+        routeName = false;
+        codeshares = null;
+        constructor(id, type) {
+            this.id = id;
+            this.type = type;
         }
     }
 
@@ -34,7 +43,7 @@ function parseFiles(mode) {
             let terminusStopName = row[8];
             let useFullNameIn = row[9];
             if (id) {
-                preAllRoutes.push(new route(id, type, bullet, bulletWhite, bulletAltText, routeName, terminus, terminusCity, terminusStopName, useFullNameIn))
+                preAllRoutes.push(new routeBahnRail(id, type, bullet, bulletWhite, bulletAltText, routeName, terminus, terminusCity, terminusStopName, useFullNameIn))
             }
         }
 
