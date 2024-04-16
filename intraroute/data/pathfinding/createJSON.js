@@ -21,7 +21,7 @@ function parseFiles(mode) {
             let adjStop = row[3];
             let weight = row[4];
             let routes = [];
-            for (let j = 5; j < 100000; j++) {
+            for (let j = 5; j < Infinity; j++) {
                 if (!(row[j])) {
                     break;
                 }
