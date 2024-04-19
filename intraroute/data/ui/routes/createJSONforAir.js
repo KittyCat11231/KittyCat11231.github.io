@@ -6,7 +6,7 @@ function parseFiles(mode) {
         codeshares = null;
         constructor(id, flightNum, type) {
             this.id = id;
-            this.flightNum;
+            this.flightNum = flightNum;
             this.type = type;
         }
     }

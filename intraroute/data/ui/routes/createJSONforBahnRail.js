@@ -32,7 +32,15 @@ function parseFiles(mode) {
             let terminus = row[6];
             let terminusCity = row[7];
             let terminusStopName = row[8];
-            let useFullNameIn = row[9];
+            let useFullNameIn = [];
+            if (row[9]) {
+                for (let i = 9; i < Infinity; i++) {
+                    if (!(row[i])) {
+                        break;
+                    }
+                    useFullNameIn.push(row[i]);
+                }
+            }
             if (id) {
                 preAllRoutes.push(new route(id, type, bullet, bulletWhite, bulletAltText, routeName, terminus, terminusCity, terminusStopName, useFullNameIn));
             }
