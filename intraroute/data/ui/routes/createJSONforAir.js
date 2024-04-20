@@ -62,12 +62,12 @@ function parseFiles(mode) {
             }
             if (row[5]) {
                 preAllRoutes[i].codeshares = [];
-            }
-            for (let i = 5; i < Infinity; i += 2) {
-                if (!(row[i])) {
-                    break;
+                for (let i = 5; i < Infinity; i += 2) {
+                    if (!(row[i])) {
+                        break;
+                    }
+                    preAllRoutes.codeshares.push(row[i]);
                 }
-                preAllRoutes.codeshares.push(row[i]);
             }
         }
 

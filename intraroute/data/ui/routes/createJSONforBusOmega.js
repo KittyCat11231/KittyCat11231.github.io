@@ -24,8 +24,9 @@ function parseFiles(mode) {
             let terminus = row[2];
             let terminusCity = row[3];
             let terminusStopName = row[4];
-            let useFullNameIn = [];
+            let useFullNameIn = null;
             if (row[5]) {
+                useFullNameIn = [];
                 for (let i = 5; i < Infinity; i++) {
                     if (!(row[i])) {
                         break;
