@@ -1,0 +1,12 @@
+bahn1north,mainline,intraroute/assets/intrabahn/bullets/1.png,intraroute/assets/intrabahn/bullets/1-white.png,IntraBahn 1,Intrepid,bahnWHQ,Whiteley,Quins Junction,bahnWHO
+bahn1south,mainline,intraroute/assets/intrabahn/bullets/1.png,intraroute/assets/intrabahn/bullets/1-white.png,IntraBahn 1,Intrepid,bahnZQA,Zaquar,Air & Sea Ports,bahnZQL
+bahn1Xnorth,express,intraroute/assets/intrabahn/bullets/1X.png,intraroute/assets/intrabahn/bullets/1X-white.png,IntraBahn 1X,Intrepid Express,bahnWHQ,Whiteley,Quins Junction,bahnWHO
+bahn1Xsouth,express,intraroute/assets/intrabahn/bullets/1X.png,intraroute/assets/intrabahn/bullets/1X-white.png,IntraBahn 1X,Intrepid Express,bahnZQA,Zaquar,Air & Sea Ports,bahnZQL
+bahn1Inorth,branch,intraroute/assets/intrabahn/bullets/1i.png,intraroute/assets/intrabahn/bullets/1i-white.png,IntraBahn 1i,Schillerton Branch North,bahnWHQ,Whiteley,Quins Junction,
+bahn1Isouth,branch,intraroute/assets/intrabahn/bullets/1i.png,intraroute/assets/intrabahn/bullets/1i-white.png,IntraBahn 1i,Schillerton Branch North,bahnSHD,Schillerton,Division Street Terminal,bahnSHC
+bahn1Jnorth,branch,intraroute/assets/intrabahn/bullets/1j.png,intraroute/assets/intrabahn/bullets/1j-white.png,IntraBahn 1j,Schillerton Branch South,bahnSHD,Schillerton,Division Street Terminal,bahnSHC
+bahn1Jsouth,branch,intraroute/assets/intrabahn/bullets/1j.png,intraroute/assets/intrabahn/bullets/1j-white.png,IntraBahn 1j,Schillerton Branch South,bahnZQA,Zaquar,Air & Sea Ports,bahnZQL
+bahn1JXnorth,branch,intraroute/assets/intrabahn/bullets/1jX.png,intraroute/assets/intrabahn/bullets/1jX-white.png,IntraBahn 1jX,Schillerton Branch South Express,bahnSHD,Schillerton,Division Street Terminal,bahnSHC
+bahn1JXsouth,branch,intraroute/assets/intrabahn/bullets/1jX.png,intraroute/assets/intrabahn/bullets/1jX-white.png,IntraBahn 1jX,Schillerton Branch South Express,bahnZQA,Zaquar,Air & Sea Ports,bahnZQL
+bahnZQcw,shuttle,intraroute/assets/intrabahn/bullets/ZQ.png,intraroute/assets/intrabahn/bullets/ZQ-white.png,IntraBahn ZQ,Zaquar Shuttle,null,null,null,
+bahnZQccw,shuttle,intraroute/assets/intrabahn/bullets/ZQ.png,intraroute/assets/intrabahn/bullets/ZQ-white.png,IntraBahn ZQ,Zaquar Shuttle,null,null,null,
